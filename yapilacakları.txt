@@ -1,0 +1,23 @@
+
+görevler
+*-*-*-*-*
+1-VirtualBox'ta Sanal Makine Oluşturma ve Debian'ı kurma
+2-Disk Bölümlendirmesi ve Şifreleme
+3-Mantıksal Hacim Yöneticisi (LVM)
+
+
+VirtualBox'ta Sanal Makine Oluşturma ve Debian'ı kurma
+------------------------------------------------------
+Yeni bir işletim sistemi başlat and Click New
+1-Name and Operating System
+    -İşletim sistemine bir isim ver --> Born2beRoot 
+    -Depolanacağı dizin --> /sgoinfre/goinfre/Perso/your_login
+    -İşletim sistemi türü --> Linux
+    -Alt işletim türü --> Debian
+    -İşletim sisteminin versiyonu --> Debian (64-bit)
+2-Hardware
+    - Bellek Kapasitesi --> 1024MB
+3-Harddisk
+    - Harddisk kapasitesi --> 31.00 GB
+
+and click finish 
