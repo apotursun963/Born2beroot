@@ -11,9 +11,14 @@
    - **Memory Size**: `1024 MB`
    - **Hard Disk Size**: `31.00 GB`
 3. Ayarları kontrol ettikten sonra **Finish** butonuna tıklayın.
-4. Debian ISO dosyasını sanal makineye bağlayarak kurulumu başlatabilirsiniz.
 
 ## Debian Kurulumu
-
+1. ISO Bağlayın: Debian ISO dosyasını sanal makineye bağlayın ve kurulumu başlatın.
+2. Kurulum Seçimi: Debian başladığında `install` seçeneğine tıklayın.
+3. Dil ve Bölge Ayarları: Dil, Coğrafi konum ve Kalvye düzenini seçin.
+4. Hostname: `your_login42` olarak belirleyin.
+5. Domain: Domain adını boş bırakın.
+6. Şifre Belirleyin: Güçlü bir root şifresi oluşturun.
+7. Kullanıcı Oluşturun: Yeni bir kullanıcı oluşturun ve güçlü bir şifre belirleyin
 
 ## Disk Bölümlendirilmesi
