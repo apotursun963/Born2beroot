@@ -19,6 +19,6 @@
 4. Hostname: `your_login42` olarak belirleyin.
 5. Domain: Domain adını boş bırakın.
 6. Şifre Belirleyin: Güçlü bir root şifresi oluşturun.
-7. Kullanıcı Oluşturun: Yeni bir kullanıcı oluşturun ve güçlü bir şifre belirleyin
+7. Kullanıcı Oluşturun: Yeni bir kullanıcı oluşturun ve güçlü bir şifre belirleyin.
 
 ## Disk Bölümlendirilmesi
