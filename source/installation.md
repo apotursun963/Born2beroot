@@ -13,8 +13,7 @@
 3. Ayarları kontrol ettikten sonra **Finish** butonuna tıklayın.
 
 ## Debian Kurulumu
-1. ISO Bağlayın
-   - Debian ISO dosyasını sanal makineye bağlayın ve kurulumu başlatın.
+1. ISO Bağlayın: Debian ISO dosyasını sanal makineye bağlayın ve kurulumu başlatın.
 3. Kurulum Seçimi: Debian başladığında `install` seçeneğine tıklayın.
 4. Dil ve Bölge Ayarları: Dil, Coğrafi konum ve Kalvye düzenini seçin.
 5. Hostname: `your_login42` olarak belirleyin.
