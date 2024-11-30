@@ -19,10 +19,10 @@ apt update && apt upgrade && apt install sudo
 ### Kullanıcıyı Sudo Grubuna ekleme
 Kendi kullanıcı adınızı sudo grubuna ekleyin.
 ```
-sudo usermod -aG sudo `<kullanıcı_adı>`
+sudo usermod -aG sudo <kullanıcı_adı>
 ```
 
-### root oturumdan çıkış
+### Root oturumdan çıkış
 root oturumdan çıkmak için:
 ```
 exit
