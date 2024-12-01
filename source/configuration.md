@@ -245,35 +245,20 @@ Veya `sudo nano /etc/login.defs` dosyasına giderek belirtilen adımları uygula
 
 ### Şifre Uzunluğu ve Karakter Kuralları:
   - Şifre en az 10 karakter olmalı.
-    - ```plaintext
-      minlen = 10
-      ```
+    - `minlen = 10`
   - Şifre, bir büyük harf, bir küçük harf ve bir rakam içermeli.
-    - ```plaintext
-      ucredit = -1
-      lcredit = -1
-      dcredit = -1
-      ```
+    - `ucredit = -1`
+    - `lcredit = -1`
+    - `dcredit = -1`
   - Şifre 3’ten fazla aynı karakteri içermemeli.
-    ```plaintext
-      maxrepeat = 3
-    ```
+    - `maxrepeat = 3`
   - Şifre kullanıcının adını içermemeli.
-    ```plaintext
-      usercheck = 1
-    ```
+    - `usercheck = 1`
   - Eski şifreden en az 7 farklı karakter olmalı (root hariç).
-    - ```plaintext
-      difok = 7
-      ```
+    - `difok = 7`
   - Kullanıcıya en fazla 3 kez şifre oluşturma denemesi hakkı olmalı.
-    - ```plaintext
-      retry = 3
-      ```
-Yukarda belirtilen adımlara göre `sudo nano /etc/security/pwquality.conf` dosyasına giderek yapılandırmaları gerçekleştirin. 
-
-### Root Kullanıcı Şifresi:
-  - Root şifresi de yukarıdaki kurallara uymalıdır.
+    - `retry = 3`
+Yukarda belirtilen adımlara göre `sudo nano /etc/security/pwquality.conf` dosyasına giderek yapılandırmaları gerçekleştirin. Ayrıca **Root şifresi** de yukarıdaki kurallara uymalıdır.
 
 ### Kullanıcı Şifresini Değiştirme
 ```
