@@ -1,6 +1,6 @@
 # Debian'ı Yapılandırma
 
-Sudo, SHH, UFW, Şifre Politikaları ve monitoring.sh kurulumları içerir.
+Sudo, UFW, SHH, Şifre Politikaları kurulumları içerir.
 
 ## Sudo Kurulumu
 **sudo (super user do),** bir komutu geçici olarak başka bir kullanıcı (genelde root) yetkileriyle çalıştırmanızı sağlar.
@@ -19,6 +19,63 @@ su root
 Sistem paketini güncelleyin ve sudo paketini yükleyin. apt, sadece komut satırı ile çalışırken aptitude hem komut satırı hem de metin tabanlı kullanıcı arayüzü (TUI) sunar. apt basit bağımlılık çözümü sağlarken, aptitude karmaşık bağımlılık sorunlarını daha esnek şekilde yönetir ve alternatif çözüm önerileri sunar.
 ```
 apt update && apt upgrade && apt install sudo
+```
+
+### Yeni Kullanıcı Ekleme
+```
+sudo useradd -m <kullanıcı_adı>
+sudo passwd <kullanıcı_adı>
+```
+
+### Kullanıcıyı Silme
+Bu komut kullanıcyı ve onun tüm ev dizinini ve dosyalarını siler.
+```
+sudo userdel -r <kullanıcı_adı>
+```
+
+### Kullanıcının ID'sini gösterme
+```
+id -u <kullanıcı_adı>
+```
+
+### Sistemde oturum açmış tüm kullanıcıları listeleme
+```
+users
+```
+
+### Yeni Bir Grup Oluşturma
+```
+sudo groupadd <grup_adı>
+```
+
+### Bir Kullanıcyı Gruba Eklemek
+```
+sudo gpasswd -a <kullanıcı_adı> <grup_adı>
+```
+
+### Bir Kullanıcyı Gruba'tan Silme
+```
+sudo gpasswd -d <kullanıcı_adı> <grup_adı>
+```
+
+### Bir Grubu Silme
+```
+sudo groupdel <grup_adı>
+```
+
+### Bir Kullanıcının Üye Olduğu Tüm Grupları Listeleme
+```
+groups <kullanıcı_adı>
+```
+
+### Kullanıcın Ana Grup Kimliğini Öğrenmek
+```
+id -u <kullanıcı_adı>
+```
+
+### Bir Gruptaki Tüm Kullanıcıları Listelemek
+```
+getent group <grup_adı>
 ```
 
 ### Kullanıcıyı Sudo Grubuna ekleme
@@ -171,3 +228,12 @@ SSH bağlantısını sonlandırmak için terminalde şu komutu yazın:
 ```
 exit
 ```
+
+## Şifreleme Politikaları
+
+
+
+
+
+
+
