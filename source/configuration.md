@@ -21,13 +21,13 @@ Sistem paketini güncelleyin ve sudo paketini yükleyin. apt, sadece komut satı
 apt update && apt upgrade && apt install sudo
 ```
 
-### Yeni Kullanıcı Ekleme
+### Yeni kullanıcı ekleme
 ```
 sudo useradd -m <kullanıcı_adı>
 sudo passwd <kullanıcı_adı>
 ```
 
-### Kullanıcıyı Silme
+### Kullanıcıyı silme
 Bu komut kullanıcyı ve onun tüm ev dizinini ve dosyalarını siler.
 ```
 sudo userdel -r <kullanıcı_adı>
@@ -43,42 +43,42 @@ id -u <kullanıcı_adı>
 users
 ```
 
-### Yeni Bir Grup Oluşturma
+### Yeni bir grup oluşturma
 ```
 sudo groupadd <grup_adı>
 ```
 
-### Bir Kullanıcyı Gruba Eklemek
+### Bir kullanıcyı gruba eklemek
 ```
 sudo gpasswd -a <kullanıcı_adı> <grup_adı>
 ```
 
-### Bir Kullanıcyı Gruba'tan Silme
+### Bir kullanıcyı gruba'tan silme
 ```
 sudo gpasswd -d <kullanıcı_adı> <grup_adı>
 ```
 
-### Bir Grubu Silme
+### Bir grubu silme
 ```
 sudo groupdel <grup_adı>
 ```
 
-### Bir Kullanıcının Üye Olduğu Tüm Grupları Listeleme
+### Bir kullanıcının üye olduğu tüm grupları listeleme
 ```
 groups <kullanıcı_adı>
 ```
 
-### Kullanıcın Ana Grup Kimliğini Öğrenmek
+### Kullanıcın ana grup kimliğini öğrenmek
 ```
 id -u <kullanıcı_adı>
 ```
 
-### Bir Gruptaki Tüm Kullanıcıları Listelemek
+### Bir gruptaki tüm kullanıcıları listelemek
 ```
 getent group <grup_adı>
 ```
 
-### Kullanıcıyı Sudo Grubuna ekleme
+### Kullanıcıyı sudo grubuna ekleme
 Bir kullanıcıyı sudo grubuna eklerseniz, bu kullanıcı yönetici (root) haklarına sahip olur 
 ve sudo komutunu kullanarak sistemde yönetici yetkileriyle işlem yapabilir.
 ```
