@@ -29,9 +29,9 @@ Disk bölümlendirilmesi, bir sabit disk veya SSD gibi bir depolama aygıtının
 
 2 bölüm oluşturacağız, ilki `unencrypted /boot` bölümü, diğeri ise `encrypted logical volumes`  için olacaktır:
 - **Şifrelenmemiş /boot** bölümü
-   - `pri/log xxGB FREE SPACE` >>> `Create a new partition` >>> `500MB` >>> `Primary` >>> `Beginning` >>> `Mount point` >>> `/boot` >>> `Done`
+   - `pri/log xxGB FREE SPACE` > `Create a new partition` > `500MB` > `Primary` > `Beginning` > `Mount point` > `/boot` > `Done`
 - **Şifrelenmiş mantıksal hacim** bölümü
-   - `pri/log xxGB FREE SPACE` >>> `Create a new partition` >>> `max` >>> `Logical` >>> `Mount point` >>> `Don't mount it` >>> `Done`
+   - `pri/log xxGB FREE SPACE` > `Create a new partition` > `max` > `Logical` > `Mount point` > `Don't mount it` > `Done`
 
 
 
