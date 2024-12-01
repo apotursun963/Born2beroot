@@ -1,3 +1,6 @@
+
+Güzel bir şekilde özetle 
+
 -Linux Dosya Sistemi Klasörlerinin Açılımı ve İşlevleri
 /etc | /bin | /sbin | /user .....
 
