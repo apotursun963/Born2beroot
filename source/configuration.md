@@ -31,21 +31,45 @@ exit
 ## SSH Kurulumu ve Yapılandırılması
 
 ### Paket Listesini Güncelleme
-Öncelikle Sistem Paketlerini Güncelleyin:
+Öncelikle sistem paketlerini güncelleyin:
 ```
 sudo apt update && sudo apt upgrade
 ```
 
 ### Openssh Server'ı Yükleme
-SSH Sunucusunu Yüklemek için:
+SSH sunucusunu yüklemek için:
 ```
 sudo apt install openssh-server
 ```
 
+### SSH Hizmetinin Durmunu Kontrol Etme
+SSH sunucusunun aktif olup olmadığını kontrol etme:
+```
+sudo systemctl status ssh
+```
+Eğer SSH hizmeti aktifse **active (running)** mesajını görürsünüsz.
+Eğer aktif değilse SSH sunucusunu başlatmak için:
+```
+sudo systemctl start ssh
+```
+
+### SSH Sunucusunun Dinlediği Port'u Değiştirme
+SSH sunucusunun varsayılan olarak dinlediği port 22'dir. Güvenliği arttırmak için bu port'u değiştirebiliriz.
+  - SSH Yapılandırma Dosyasını Düzenleme için:
+    ```
+    sudo nano /etc/ssh/sshd_config
+    ```
+  - Port Değerini Değiştirme:
+    ```
+    #Port 22 >>> Port 4242
+    ```
+  - Yapılandırmayı Kaydetmek için:
+    ```
+    Ctrl + O | Enter | Ctrl + X
+    ```
 
 
-
-
+    
 
 
 
