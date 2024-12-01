@@ -230,10 +230,25 @@ exit
 ```
 
 ## Şifreleme Politikaları
+Şifre politikaları, şifrelerin güvenliğini sağlamak amacıyla belirlenen kurallardır. Bu kurallar genellikle şifre uzunluğu, geçerlilik süresi, değiştirme sıklığı ve kullanıcıya uyarı mesajı gönderilmesi gibi öğeleri içerir.
 
+### Şifre Süresi ve Değiştirme Kuralları:
+- Şifre her 30 günde bir dolmalı.
+- Şifre değiştirildikten 2 gün sonra tekrar değiştirilebilir.
+- Şifre süresi dolmadan 7 gün önce uyarı verilmelidir.
 
+### Şifre Uzunluğu ve Karakter Kuralları:
+- Şifre en az 10 karakter olmalı.
+- Şifre, bir büyük harf, bir küçük harf ve bir rakam içermeli.
+- Şifre 3’ten fazla aynı karakteri içermemeli ve kullanıcının adını içermemeli.
+- Eski şifreden en az 7 farklı karakter olmalı (root hariç).
 
+### Root Kullanıcı Şifresi:
+- Root şifresi de yukarıdaki kurallara uymalıdır.
 
-
-
-
+### Sudo Konfigürasyonu:
+- Yanlış şifre denemeleri 3 ile sınırlı olmalı.
+- Sudo kullanılırken yanlış şifre nedeniyle hata meydana gelirse, özel bir mesaj gösterilmelidir.
+- Sudo komutları, `/var/log/sudo/` dizinine kaydedilmelidir.
+- Güvenlik için TTY modu aktif olmalı.
+- Sudo ile çalıştırılabilen dizinler sınırlandırılmalıdır. Örneğin: `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin`.
