@@ -136,18 +136,18 @@ Her mantıksal birim için dosya sistemlerini ve bağlama noktalarını aşağı
 ### 7. Kurulumun Doğruluğunu Kontrol Etme
 Kurulumu doğru şekilde tamamlayıp tamamlamadığınızı kontrol etmek için aşağıdaki komutları çalıştırabilirsiniz:
    - Sistemdeki disk ve bölümleri görüntülemek için:
-   ```bash
-   lsblk
-   ```
+      ```bash
+      lsblk
+      ```
    - İşletim sistemi sürümünü kontrol etmek için:
-   ```bash
-   cat /etc/os-release
-   ```
+      ```bash
+      cat /etc/os-release
+      ```
    - Disklerin bağlı olup olmadığını kontrol etmek için:
-   ```bash
-   df -h
-   ```
+      ```bash
+      df -h
+      ```
    - Oluşturduğunuz kullanıcının doğru şekilde eklenip eklenmediğini görmek için
-   ```bash
-   whoami
-   ```
+      ```bash
+      whoami
+      ```
