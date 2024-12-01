@@ -1,6 +1,6 @@
-# Debian'ı Yapılandırma
+# Sistem Yönetimi ve Güvenlik Kurulumları
 
-Sudo, UFW, SHH, Şifre Politikaları kurulumları içerir.
+Bu doküman, **Linux** sistemlerinde Sudo, UFW, SSH ve Şifreleme Politikarları gibi temel **Sistem Yönetimi** ve **Güvenlik Yapılandırmaları** ele alır.
 
 ## Sudo Kurulumu
 **sudo (super user do),** bir komutu geçici olarak başka bir kullanıcı (genelde root) yetkileriyle çalıştırmanızı sağlar.
