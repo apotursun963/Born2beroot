@@ -22,3 +22,27 @@
 8. Kullanıcı Oluşturun: Yeni bir kullanıcı oluşturun ve güçlü bir şifre belirleyin.
 
 ## Disk Bölümlendirilmesi
+Disk bölümlendirilmesi, bir sabit disk veya SSD gibi bir depolama aygıtının, birden fazla bağımsız bölüme (partition) ayrılması işlemidir. Bu bölümler, depolama cihazının farklı alanlarını ayrı ayrı kullanmayı sağlar ve her biri işletim sistemi tarafından ayrı bir disk gibi algılanır.
+1. `Manual` Bölümlemeyi Seçin.
+2. Harddisk Seçin - `SCSI13 (0,0,0) (sda)`
+3. `Yes` Seçeneğini Tıklayın.
+
+2 bölüm oluşturacağız, ilki `unencrypted /boot` bölümü, diğeri ise `encrypted logical volumes`  için olacaktır:
+   - unencrypted /boot
+     - `pri/log xxGB FREE SPACE` >>> `Create a new partition` >>> `500MB` >>> `Primary` >>> `Beginning` >>> `Mount point` >>> `/boot` >>> `Done`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
