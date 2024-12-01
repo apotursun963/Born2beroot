@@ -33,12 +33,48 @@ root oturumdan çıkmak için:
 exit
 ```
 
+
+## UFW Kurulumu
+UFW (Uncomplicated Firewall), `Linux` sistemlerinde kullanılan, basit bir **güvenlik duvarı** aracıdır. Temel amacı, ağdaki trafiği izleyerek ve denetleyerek zararlı erişimleri engellemeyi ve yetkilendirilmiş trafiği geçirmeyi hedefler. Bu sistem, **iç a**ğ ile **dış ağ** arasındaki iletişimi kontrol eder ve belirli kurallar ile filtreler. Güvenlik duvarları, yalnızca belirli **IP** adreslerinden gelen bağlantılara veya belirli **portlar** üzerinden veri alışverişine izin vererek, ağdaki kötü niyetli yazılımları ve saldırıları engeller. Kullanım alanları, Sunucularda dış bağlantılara karşı güvenlik sağlamak ve Belirli IP'ler veya port'lar üzerinden trafiği sınırlamak. 
+  - **Dış Ağ (External Network)**: İnternet gibi, dış dünyadaki herkese açık olan geniş bir ağdır.
+  - **İç Ağ (Loca Network)**: Evdeki veya iş yerindeki bilgisayarların, yazıcıların ve diğer cihazların bağlı olduğu özel ağdır. (örneğin, Wİ-Fİ ağ).
+  - **IP Adresi**: Cihazların (bilgisayar, telefon, yazıcı vb.) internet veya yerel ağ üzerinde birbirleriyle iletişim kurmasını sağlayan, **benzersiz** bir sayısal kimliktir.
+
+UFW yüklemek
+```
+sudo apt install ufw
+```
+
+UFW'yi etkinleştirmek ve devre dışı bırakamk.
+```
+sudo ufw enable
+sudo ufw disable
+```
+
+Port açmak
+Port açmak, yani port üzerinden gelen giden ağ trafiğine izin vermek.
+Bu, dış dünyadan (internet gibi) gelen bağlantıların iç ağa erişmesine izin vermek için kullanılır.
+```
+sudo ufw allow 2
+```
+
+Port kapatmak
+Port kapatmak, yani port üzerinden gelen giden ağ trafiğini engellemek/silmek.
+```
+sudo ufw deny 22
+```
+
+Durum kontrolü:
+```
+sudo ufw status verbose
+```
+
+
 ## SSH Kurulumu ve Yapılandırılması
 **SSH (Secure Shell)**, uzak sunuculara güvenli bir şekilde bağlanmak için kullanılan bir ağ protokolüdür.
 Güvenliği, verileri şifreleyerek ve kimlik doğrulama isteyerek sağlar.
-**Protokol**, İki cihaz arasındaki veri iletişimini düzenleyen kurallar ve standartlardır. Verilerin nasıl gönderileceğini ve alınacağını belirler. 
-örneğin, HTTP, HTTPS ve SSH gibi farklı protokoller vardır.
-**Port (Liman),** ağdaki cihazlar arasındaki iletişimi sağlayan "kapılar"dır. Fiziksel portlar (USB, Ethernet gibi) cihazlar arasında veri iletimini sağlar. Sanal portlar ise yazılım seviyesinde, belirli hizmetler veya uygulamalar için kullanılır. Örneğin, **SSH** için **22** numaralı port kullanılır. 
+  - **Protokol**, İki cihaz arasındaki veri iletişimini düzenleyen kurallar ve standartlardır. Verilerin nasıl gönderileceğini ve alınacağını belirler. örneğin, HTTP, HTTPS ve SSH gibi farklı protokoller vardır.
+  - **Port (Liman),** ağdaki cihazlar arasındaki iletişimi sağlayan "kapılar"dır. Fiziksel portlar (USB, Ethernet gibi) cihazlar arasında veri iletimini sağlar. Sanal portlar ise yazılım seviyesinde, belirli hizmetler veya uygulamalar için kullanılır. Örneğin, **SSH** için **22** numaralı port kullanılır. 
 
 ### Paket Listesini Güncelleme
 Öncelikle sistem paketlerini güncelleyin:
@@ -79,7 +115,7 @@ SSH Sunucusunun Varsayılan Olarak Dinlediği Port 22'dir. Güvenliği Arttırma
     ```
 
 ### SSH Hizmetini Yeniden Başlatma
-Yapılandırma Değişiklerinin Geerli Olması İçin SSH Hizmeti Yeniden Başlatmamız Gerekir:
+Yapılandırma Değişiklerinin Geçerli Olması İçin SSH Hizmeti Yeniden Başlatmamız Gerekir:
 ```
 sudo systemctl restart ssh
 ```
