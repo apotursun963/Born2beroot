@@ -54,24 +54,53 @@ sudo systemctl start ssh
 ```
 
 ### SSH Sunucusunun Dinlediği Port'u Değiştirme
-SSH sunucusunun varsayılan olarak dinlediği port 22'dir. Güvenliği arttırmak için bu port'u değiştirebiliriz.
-  - SSH Yapılandırma Dosyasını Düzenleme için:
+SSH Sunucusunun Varsayılan Olarak Dinlediği Port 22'dir. Güvenliği Arttırmak İçin Bu Port'u Değiştirebiliriz.
+  - SSH yapılandırma dosyasını düzenlemek için:
     ```
     sudo nano /etc/ssh/sshd_config
     ```
-  - Port Değerini Değiştirme:
+  - Port değerini değiştirme:
     ```
     #Port 22 >>> Port 4242
     ```
-  - Yapılandırmayı Kaydetmek için:
+  - yapılandırmayı kaydetmek için:
     ```
     Ctrl + O | Enter | Ctrl + X
     ```
 
+### SSH Hizmetini Yeniden Başlatma
+Yapılandırma Değişiklerinin Geerli Olması İçin SSH Hizmeti Yeniden Başlatmamız Gerekir:
+```
+sudo systemctl restart ssh
+```
 
-    
+### Güvenlik Duvarı (UFW) Eklemek
+Yeni Port'un Güvenlik Duvarında İzinli Olmasını Sağlamak İçin:
+```
+sudo ufw allow <port>
+```
 
+Güvenlik Duvarında Port İzni Kaldırmak
+Eğer bir portu engellemek isterseniz:
+```
+sudo ufw delete allow <port>
+```
 
+Güvenlik Duvarını Etkinleştirme
+  - Güvenlik duvarı (UFW) kapalıysa, şu komutla etkinleştirebiliriz:
+    ```
+    sudo ufw enable
+    ```
+  - Güvenlik duvarını kapatma
+    ```
+    sudo ufw disable
+    ```
+
+UFW Durumunu Kontrol Etme
+Güvenlik duvarının durumunu kontrol etmek için:
+```
+sudo ufw status
+```
 
 
 
