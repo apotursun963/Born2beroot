@@ -241,7 +241,7 @@ exit
     - `sudo chage -W 7 <kullanıcı_adı>`
   - Kullanıcı ayarlarını kontrol etmek için:
     - `chage -l <kullanıcı_adı>`
-Veya `sudo nano /etc/login.defs` dosyasına giderek belirtilen adımları uygulayabilirsinisz.
+  - Veya `sudo nano /etc/login.defs` dosyasına giderek belirtilen adımları **manuel** olarak uygulayabilirsinisz.
 
 ### Şifre Uzunluğu ve Karakter Kuralları:
   - Şifre en az 10 karakter olmalı.
@@ -258,7 +258,7 @@ Veya `sudo nano /etc/login.defs` dosyasına giderek belirtilen adımları uygula
     - `difok = 7`
   - Kullanıcıya en fazla 3 kez şifre oluşturma denemesi hakkı olmalı.
     - `retry = 3`
-Yukarda belirtilen adımlara göre `sudo nano /etc/security/pwquality.conf` dosyasına giderek yapılandırmaları gerçekleştirin. Ayrıca **Root şifresi** de yukarıdaki kurallara uymalıdır.
+  - Yukarda belirtilen adımlara göre `sudo nano /etc/security/pwquality.conf` dosyasına giderek yapılandırmaları gerçekleştirin. Ayrıca **Root şifresi** de yukarıdaki kurallara uymalıdır.
 
 ### Kullanıcı Şifresini Değiştirme
 ```
