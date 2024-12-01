@@ -40,7 +40,7 @@ UFW (Uncomplicated Firewall), `Linux` sistemlerinde kullanılan, basit bir **gü
   - **İç Ağ (Loca Network)**: Evdeki veya iş yerindeki bilgisayarların, yazıcıların ve diğer cihazların bağlı olduğu özel ağdır. (örneğin, Wİ-Fİ ağ).
   - **IP Adresi**: Cihazların (bilgisayar, telefon, yazıcı vb.) internet veya yerel ağ üzerinde birbirleriyle iletişim kurmasını sağlayan, **benzersiz** bir sayısal kimliktir.
 
-UFW yüklemek
+UFW'yi yüklemek
 ```
 sudo apt install ufw
 ```
@@ -51,20 +51,18 @@ sudo ufw enable
 sudo ufw disable
 ```
 
-Port açmak
 Port açmak, yani port üzerinden gelen giden ağ trafiğine izin vermek.
 Bu, dış dünyadan (internet gibi) gelen bağlantıların iç ağa erişmesine izin vermek için kullanılır.
 ```
 sudo ufw allow 2
 ```
 
-Port kapatmak
 Port kapatmak, yani port üzerinden gelen giden ağ trafiğini engellemek/silmek.
 ```
 sudo ufw deny 22
 ```
 
-Durum kontrolü:
+Durum kontrolü, güvenlik duvarının etkin olup olmadığını, hangi kuralların uygulandığını ve mevcut yapılandırmayı gösterir.
 ```
 sudo ufw status verbose
 ```
@@ -172,9 +170,3 @@ SSH bağlantısını sonlandırmak için terminalde şu komutu yazın:
 ```
 exit
 ```
-
-
-
-
-
-
