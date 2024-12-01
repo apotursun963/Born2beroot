@@ -115,14 +115,14 @@ UFW Durumunu Kontrol Etme
 ### Sanal Makineye Bağlantı Kurma (VirtualBox)
 Sanal makine üzerinden bağlantı kurmak için port yönlendirme yapmanız gerekir.
   - VirtualBox ayarlarını yapılandırma
-    1- VirtualBox sanal makinenizi seçin.
-    2- Ayarlar >> Ağa >> Bağadaştırıc 1 (Adapter 1) kısmına gidin.
-    3- Gelişmiş >> Port yönlendirme seçeneğini (Port Forwarding) seçin.
+    - VirtualBox sanal makinenizi seçin.
+    - Ayarlar >> Ağa >> Bağadaştırıc 1 (Adapter 1) kısmına gidin.
+    - Gelişmiş >> Port yönlendirme seçeneğini (Port Forwarding) seçin.
   - Port yönlendirme kuralı ekleme
-    1- Ad: SSH
-    2- Protokol: TCP
-    3- Ana Bilgisayar Portu (Host Port): 4242
-    4- Konuk Portu (Guest Port): 4242
+    - Ad: SSH
+    - Protokol: TCP
+    - Ana Bilgisayar Portu (Host Port): 4242
+    - Konuk Portu (Guest Port): 4242
   Değişiklikleri Kaydedin.
 
 ### SSH İle Bağalantı Kurma
