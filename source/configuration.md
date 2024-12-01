@@ -233,22 +233,49 @@ exit
 Şifre politikaları, şifrelerin güvenliğini sağlamak amacıyla belirlenen kurallardır. Bu kurallar genellikle şifre uzunluğu, geçerlilik süresi, değiştirme sıklığı ve kullanıcıya uyarı mesajı gönderilmesi gibi öğeleri içerir.
 
 ### Şifre Süresi ve Değiştirme Kuralları:
-- Şifre her 30 günde bir dolmalı.
-- Şifre değiştirildikten 2 gün sonra tekrar değiştirilebilir.
-- Şifre süresi dolmadan 7 gün önce uyarı verilmelidir.
+  - Şifre her 30 günde bir dolmalı.
+    - `sudo chage -M 30 <kullanıcı_adı>`
+  - Şifre değiştirildikten 2 gün sonra tekrar değiştirilebilir.
+    - `sudo chage -m 2 <kullanıcı_adı>`
+  - Şifre süresi dolmadan 7 gün önce uyarı verilmelidir.
+    - `sudo chage -W 7 <kullanıcı_adı>`
+  - Kullanıcı ayarlarını kontrol etmek için:
+    - `chage -l <kullanıcı_adı>`
+Veya `sudo nano /etc/login.defs` dosyasına giderek belirtilen adımları uygulayabilirsinisz.
 
 ### Şifre Uzunluğu ve Karakter Kuralları:
-- Şifre en az 10 karakter olmalı.
-- Şifre, bir büyük harf, bir küçük harf ve bir rakam içermeli.
-- Şifre 3’ten fazla aynı karakteri içermemeli ve kullanıcının adını içermemeli.
-- Eski şifreden en az 7 farklı karakter olmalı (root hariç).
+  - Şifre en az 10 karakter olmalı.
+    - ```plaintext
+      minlen = 10
+      ```
+  - Şifre, bir büyük harf, bir küçük harf ve bir rakam içermeli.
+    - ```plaintext
+      ucredit = -1
+      lcredit = -1
+      dcredit = -1
+      ```
+  - Şifre 3’ten fazla aynı karakteri içermemeli.
+    ```plaintext
+      maxrepeat = 3
+    ```
+  - Şifre kullanıcının adını içermemeli.
+    ```plaintext
+      usercheck = 1
+    ```
+  - Eski şifreden en az 7 farklı karakter olmalı (root hariç).
+    - ```plaintext
+      difok = 7
+      ```
+  - Kullanıcıya en fazla 3 kez şifre oluşturma denemesi hakkı olmalı.
+    - ```plaintext
+      retry = 3
+      ```
+Yukarda belirtilen adımlara göre `sudo nano /etc/security/pwquality.conf` dosyasına giderek yapılandırmaları gerçekleştirin. 
 
 ### Root Kullanıcı Şifresi:
-- Root şifresi de yukarıdaki kurallara uymalıdır.
+  - Root şifresi de yukarıdaki kurallara uymalıdır.
 
-### Sudo Konfigürasyonu:
-- Yanlış şifre denemeleri 3 ile sınırlı olmalı.
-- Sudo kullanılırken yanlış şifre nedeniyle hata meydana gelirse, özel bir mesaj gösterilmelidir.
-- Sudo komutları, `/var/log/sudo/` dizinine kaydedilmelidir.
-- Güvenlik için TTY modu aktif olmalı.
-- Sudo ile çalıştırılabilen dizinler sınırlandırılmalıdır. Örneğin: `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin`.
+### Kullanıcı Şifresini Değiştirme
+```
+sudo passwd <kullanıcı_adı>
+```
