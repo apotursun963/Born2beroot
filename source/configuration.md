@@ -3,11 +3,11 @@
 Sudo, SHH, UFW, Şifre Politikaları ve monitoring.sh kurulumları içerir.
 
 ## Sudo Kurulumu
-sudo (super user do), bir komutu geçici olarak başka bir kullanıcı (genelde root) yetkileriyle çalıştırmanızı sağlar.
-Kendi kullanıcı şifrenizi kullanarak işlem yapabilirsiniz.root şifresine ihtiyaç duyulmaz.
+**sudo (super user do),** bir komutu geçici olarak başka bir kullanıcı (genelde root) yetkileriyle çalıştırmanızı sağlar.
+Kendi kullanıcı şifrenizi kullanarak işlem yapabilirsiniz. **root** şifresine ihtiyaç duyulmaz.
 
 ### Sudo Kurma
-su (swicth user), bir kullanıcıdan başka bir kullanıcıya (genelde root) geçiş yapmayı sağlayan bir komuttur.
+**su (swicth user),** bir kullanıcıdan başka bir kullanıcıya (genelde root) geçiş yapmayı sağlayan bir komuttur.
 Kullanıcının şifresini (root şifresini) girmenizi gerektirir.
 Öncelikle `root` kullanıcısına geçmek için aşağıdaki komutu kullanın.
 ```
@@ -15,7 +15,7 @@ su root
 ```
 
 ### Sudo'yu Yükleyin
-apt ve aptitude, sistemde yazılımların kurulumu, kaldırılması ve güncellenmesi gibi işlemleri gerçekleştirmek için kullanılır.
+**apt** ve **aptitude**, sistemde yazılımların kurulumu, kaldırılması ve güncellenmesi gibi işlemleri gerçekleştirmek için kullanılır.
 Sistem paketini güncelleyin ve sudo paketini yükleyin.
 ```
 apt update && apt upgrade && apt install sudo
@@ -34,11 +34,11 @@ exit
 ```
 
 ## SSH Kurulumu ve Yapılandırılması
-SSH (Secure Shell), uzak sunuculara güvenli bir şekilde bağlanmak için kullanılan bir ağ protokolüdür.
+**SSH (Secure Shell)**, uzak sunuculara güvenli bir şekilde bağlanmak için kullanılan bir ağ protokolüdür.
 Güvenliği, verileri şifreleyerek ve kimlik doğrulama isteyerek sağlar.
-Protokol, İki cihaz arasındaki veri iletişimini düzenleyen kurallar ve standartlardır. Verilerin nasıl gönderileceğini ve alınacağını belirler. 
+**Protokol**, İki cihaz arasındaki veri iletişimini düzenleyen kurallar ve standartlardır. Verilerin nasıl gönderileceğini ve alınacağını belirler. 
 örneğin, HTTP, HTTPS ve SSH gibi farklı protokoller vardır.
-Port (Liman), ağdaki cihazlar arasındaki iletişimi sağlayan "kapılar"dır. Fiziksel portlar (USB, Ethernet gibi) cihazlar arasında veri iletimini sağlar. Sanal portlar ise yazılım seviyesinde, belirli hizmetler veya uygulamalar için kullanılır. Örneğin, SSH için 22 numaralı port kullanılır. 
+**Port (Liman),** ağdaki cihazlar arasındaki iletişimi sağlayan "kapılar"dır. Fiziksel portlar (USB, Ethernet gibi) cihazlar arasında veri iletimini sağlar. Sanal portlar ise yazılım seviyesinde, belirli hizmetler veya uygulamalar için kullanılır. Örneğin, **SSH** için **22** numaralı port kullanılır. 
 
 ### Paket Listesini Güncelleme
 Öncelikle sistem paketlerini güncelleyin:
@@ -115,14 +115,14 @@ UFW Durumunu Kontrol Etme
 ### Sanal Makineye Bağlantı Kurma (VirtualBox)
 Sanal makine üzerinden bağlantı kurmak için port yönlendirme yapmanız gerekir.
   - VirtualBox ayarlarını yapılandırma
-    1. VirtualBox sanal makinenizi seçin.
-    2. Ayarlar >> Ağa >> Bağadaştırıc 1 (Adapter 1) kısmına gidin.
-    3. Gelişmiş >> Port yönlendirme seçeneğini (Port Forwarding) seçin.
+    1- VirtualBox sanal makinenizi seçin.
+    2- Ayarlar >> Ağa >> Bağadaştırıc 1 (Adapter 1) kısmına gidin.
+    3- Gelişmiş >> Port yönlendirme seçeneğini (Port Forwarding) seçin.
   - Port yönlendirme kuralı ekleme
-    1. Ad: SSH
-    2. Protokol: TCP
-    3. Ana Bilgisayar Portu (Host Port): 4242
-    4. Konuk Portu (Guest Port): 4242
+    1- Ad: SSH
+    2- Protokol: TCP
+    3- Ana Bilgisayar Portu (Host Port): 4242
+    4- Konuk Portu (Guest Port): 4242
   Değişiklikleri Kaydedin.
 
 ### SSH İle Bağalantı Kurma
