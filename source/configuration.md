@@ -21,6 +21,12 @@ Sistem paketini güncelleyin ve sudo paketini yükleyin. apt, sadece komut satı
 apt update && apt upgrade && apt install sudo
 ```
 
+### Sudo'nun yüklenip yüklenmediğini kontrol etme
+dpkg, Debian tabanlı sistemlerde .deb paketlerini yüklemek, silmek ve bilgi almak için kullanılan düşük seviyeli bir araçtır. Bağımlılıkları otomatik olarak yönetmez. Bunun yerine, apt gibi yüksek seviyeli araçlar, paketlerin bağımlılıklarını çözer ve paketleri internetten indirir.
+```
+dpkg -l sudo
+```
+
 ### Yeni kullanıcı ekleme
 ```
 sudo useradd -m <kullanıcı_adı>
