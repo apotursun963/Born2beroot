@@ -61,7 +61,7 @@ sudo gpasswd -a <kullanıcı_adı> <grup_adı>
 
 ### Bir kullanıcyı gruba'tan silme
 ```
-sudo gpasswd -d <kullanıcı_adı> <grup_adı>
+sudo gpasswd -d <kullanıcı_adı> <grup_adı> || sudo usermod -rG sudo mikail
 ```
 
 ### Bir grubu silme
