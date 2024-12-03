@@ -170,6 +170,11 @@ Eğer aktif değilse SSH sunucusunu başlatmak için:
 sudo systemctl start ssh
 ```
 
+SSH hizmetini inactive yapmak.
+```
+sudo systemctl stop ssh
+```
+
 ### SSH Sunucusunun Dinlediği Port'u Değiştirme
 SSH Sunucusunun Varsayılan Olarak Dinlediği Port 22'dir. Güvenliği Arttırmak İçin Bu Port'u Değiştirebiliriz.
   - SSH yapılandırma dosyasını düzenlemek için:
