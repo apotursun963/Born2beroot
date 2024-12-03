@@ -208,22 +208,6 @@ Eğer bir portu engellemek isterseniz:
 sudo ufw delete allow <port>
 ```
 
-Güvenlik Duvarını Etkinleştirme
-  - Güvenlik duvarı (UFW) kapalıysa, şu komutla etkinleştirebiliriz:
-    ```
-    sudo ufw enable
-    ```
-  - Güvenlik duvarını kapatma
-    ```
-    sudo ufw disable
-    ```
-
-UFW Durumunu Kontrol Etme
-  - Güvenlik duvarının durumunu kontrol etmek için:
-  ```
-  sudo ufw status
-  ```
-
 ### Sanal Makineye Bağlantı Kurma (VirtualBox)
 Sanal makine üzerinden bağlantı kurmak için port yönlendirme yapmanız gerekir.
   - VirtualBox ayarlarını yapılandırma
