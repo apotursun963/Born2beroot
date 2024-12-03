@@ -56,12 +56,12 @@ sudo groupadd <grup_adı>
 
 ### Bir kullanıcyı gruba eklemek
 ```
-sudo gpasswd -a <kullanıcı_adı> <grup_adı>
+sudo usermod -aG <grup_adı> <kullanıcı_adı> 
 ```
 
 ### Bir kullanıcyı gruba'tan silme
 ```
-sudo gpasswd -d <kullanıcı_adı> <grup_adı> || sudo usermod -rG sudo mikail
+sudo usermod -rG <grup_adı> <kullanıcı_adı>
 ```
 
 ### Bir grubu silme
@@ -88,7 +88,7 @@ getent group <grup_adı>
 Bir kullanıcıyı sudo grubuna eklerseniz, bu kullanıcı yönetici (root) haklarına sahip olur 
 ve sudo komutunu kullanarak sistemde yönetici yetkileriyle işlem yapabilir.
 ```
-sudo usermod -aG sudo <kullanıcı_adı> || adduser <kullanıcı_adı> sudo
+sudo usermod -aG sudo <kullanıcı_adı> 
 ```
 
 ### Root oturumdan çıkış
