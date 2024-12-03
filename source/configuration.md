@@ -88,7 +88,7 @@ getent group <grup_adı>
 Bir kullanıcıyı sudo grubuna eklerseniz, bu kullanıcı yönetici (root) haklarına sahip olur 
 ve sudo komutunu kullanarak sistemde yönetici yetkileriyle işlem yapabilir.
 ```
-sudo usermod -aG sudo <kullanıcı_adı>
+sudo usermod -aG sudo <kullanıcı_adı> || adduser <kullanıcı_adı> sudo
 ```
 
 ### Root oturumdan çıkış
