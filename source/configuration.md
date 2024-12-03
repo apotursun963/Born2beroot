@@ -44,6 +44,11 @@ sudo userdel -r <kullanıcı_adı>
 id -u <kullanıcı_adı>
 ```
 
+### Kullanıcının şifresini değiştirme
+```
+sudo passwd <kullanıcı_adı>
+```
+
 ### Sistemde oturum açmış tüm kullanıcıları listeleme
 ```
 users
