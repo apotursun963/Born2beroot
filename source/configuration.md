@@ -136,6 +136,10 @@ Durum kontrolü, güvenlik duvarının etkin olup olmadığını, hangi kurallar
 sudo ufw status verbose
 ```
 
+Belirli bir IP'den yalnızca HTTP trafiğine izin vermek
+```
+sudo ufw allow from 192.168.1.100 to any port 80
+```
 
 ## SSH Kurulumu ve Yapılandırılması
 **SSH (Secure Shell)**, uzak sunuculara güvenli bir şekilde bağlanmak için kullanılan bir ağ protokolüdür.
