@@ -232,6 +232,11 @@ SSH bağlantısını, host makinenizden (Ana Bilgisayar) kurmak için aşağıda
 ssh <kullanıcı_adı>@localhost -p <port>
 ```
 
+### Ağ yapılandırması ve IP adresi bilgilerini görüntülemek
+```
+ip a
+```
+
 ### SSH Oturumundan Çıkış
 SSH bağlantısını sonlandırmak için terminalde şu komutu yazın:
 ```
