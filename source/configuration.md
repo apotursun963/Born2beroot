@@ -51,7 +51,7 @@ sudo passwd <kullanıcı_adı>
 
 ### Sistemde oturum açmış tüm kullanıcıları listeleme
 ```
-users
+users || sudo getent passwd || cat etc/passwd
 ```
 
 ### Yeni bir grup oluşturma
