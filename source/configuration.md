@@ -81,7 +81,7 @@ groups <kullanıcı_adı>
 
 ### Kullanıcın ana grup kimliğini öğrenmek
 ```
-id -u <kullanıcı_adı>
+id -g <kullanıcı_adı>
 ```
 
 ### Bir gruptaki tüm kullanıcıları listelemek
