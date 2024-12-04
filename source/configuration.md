@@ -181,7 +181,7 @@ sudo systemctl stop ssh
 ```
 
 ### SSH Sunucusunun Dinlediği Port'u Değiştirme
-SSH Sunucusunun Varsayılan Olarak Dinlediği Port 22'dir. Güvenliği Arttırmak İçin Bu Port'u Değiştirebiliriz.
+SSH Sunucusunun Varsayılan Olarak Dinlediği (Beklediği) Port 22'dir. Güvenliği Arttırmak İçin Bu Port'u Değiştirebiliriz.
   - SSH yapılandırma dosyasını düzenlemek için:
     ```
     sudo nano /etc/ssh/sshd_config
