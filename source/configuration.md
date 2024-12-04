@@ -84,6 +84,11 @@ groups <kullanıcı_adı>
 id -g <kullanıcı_adı>
 ```
 
+### Var olan bütün grupları listeleme
+```
+sudo getent group || cat /etc/group
+```
+
 ### Bir gruptaki tüm kullanıcıları listelemek
 ```
 getent group <grup_adı>
