@@ -100,7 +100,7 @@ Her mantıksal birim için dosya sistemlerini ve bağlama noktalarını aşağı
 - **LV home**: `1 xxGB` > **Use as**: `Ext4` > **Mount point**: `/home` > `Done`
 - **LV swap**: `1 xxGB` > **Use as**: `swap area` > `Done`
 - **LV var**: `1 xxGB` > **Use as**: `Ext4` > **Mount point**: `/var` > `Done`
-- **LV var-log**: `1 xxGB` > **Use as**: `Ext4` > **Mount point**: `/var/log` > `Done`
+- **LV var-log**: `1 xxGB` > **Use as**: `Ext4` > **Mount point**: > **Enter manually**: `/var/log` > `Done`
 
 ## Bölümlendirmeyi Bitirip Değişiklikleri Yazma
 
