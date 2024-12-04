@@ -91,7 +91,7 @@ sudo getent group || cat /etc/group
 
 ### Bir gruptaki tüm kullanıcıları listelemek
 ```
-getent group <grup_adı>
+sudo getent group <grup_adı>
 ```
 
 ### Kullanıcıyı sudo grubuna ekleme
