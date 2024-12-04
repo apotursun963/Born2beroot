@@ -149,5 +149,5 @@ Kurulumu doğru şekilde tamamlayıp tamamlamadığınızı kontrol etmek için 
       ```
    - Oluşturduğunuz kullanıcının doğru şekilde eklenip eklenmediğini görmek için
       ```bash
-      whoami
+      whoami || who || w
       ```
