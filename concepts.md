@@ -1,186 +1,96 @@
+# Linux Dosya Sistemi ve Sistem Yönetimi
 
+## Linux Dosya Sistemi Klasörleri
+### Önemli Klasörlerin Açıklamaları ve İşlevleri
+- **/etc**: Sistem yapılandırma dosyalarını içerir.
+- **/bin**: Temel sistem programlarının yer aldığı dizin (örneğin `ls`, `cp`).
+- **/sbin**: Sistem yöneticisi tarafından kullanılan programların bulunduğu dizin (örneğin `ifconfig`, `reboot`).
+- **/usr**: Kullanıcıya yönelik uygulama ve kütüphanelerin yer aldığı dizin.
+- **/home**: Kullanıcı dosyalarının bulunduğu kişisel dizinler.
+- **/var**: Değişken veri dosyaları (örneğin log dosyaları, e-posta kuyrukları).
+- **/tmp**: Geçici dosyalar için kullanılan dizin.
 
-Güzel bir şekilde özetle 
-
--Linux Dosya Sistemi Klasörlerinin Açılımı ve İşlevleri
-/etc | /bin | /sbin | /user .....
-
-
-Sistem yönetimi (system administration) Nedir ?
------------------------------------------------
-Sistem yönetimi, bilgisayar sistemlerinin, ağların ve sunucuların yönetilmesi, 
-bakımının yapılması ve güvenliğinin sağlanması sürecidir. 
-Sistem yöneticileri, altyapının sorunsuz çalışmasını sağlamak için donanım, 
-yazılım ve güvenlik önlemleriyle ilgilenir. Sistem yönetimi kavramlarından bazıları:
-
-1-Kullanıcı Hesapları Yönetimi:
-Kullanıcı hesapları yönetimi, bir bilgisayar sisteminde her birey için 
-kimlik oluşturulması ve bu kimliğin kontrol edilmesidir. 
-Sistem yöneticileri, her kullanıcıya özgü hesaplar oluşturur ve her hesabın erişim haklarını belirler. 
-Bu haklar, kullanıcıların hangi kaynaklara erişebileceğini ve hangi işlemleri gerçekleştirebileceğini düzenler. 
-Örneğin, bazı kullanıcılar yalnızca okuma iznine sahipken, diğerleri yazma ve düzenleme izni alabilir. 
-Bu, güvenliği sağlamak ve kullanıcıların sadece yetkilendirildikleri verilere erişmesini temin 
-etmek için oldukça önemlidir.
-
-2-Şifre Politikaları:
-Şifre politikaları, kullanıcıların güçlü ve güvenli şifreler oluşturmasını sağlamak amacıyla belirlenen kurallardır. 
-Bu kurallar, şifrelerin minimum uzunluğu, karmaşıklığı (büyük/küçük harf, rakam, özel karakter kullanımı) 
-ve geçerlilik süresi gibi unsurları içerir. 
-Güçlü şifreler, siber saldırılara karşı bir savunma hattı oluşturur ve kullanıcı hesaplarının kötüye 
-kullanımını engeller. Ayrıca, şifrelerin periyodik olarak değiştirilmesi veya eski şifrelerin kullanılmaması 
-gibi güvenlik önlemleri de şifre politikalarının bir parçasıdır.
-
-3-Güvenlik Duvarı (Firewall) Yönetimi:
-Güvenlik duvarı yönetimi, ağdaki trafiği izleyerek ve denetleyerek zararlı erişimlerin engellenmesini, 
-yetkilendirilmiş trafiğin ise geçmesini sağlamayı amaçlar. 
-Güvenlik duvarları, iç ağ ile dış ağ arasındaki iletişimi kontrol eder ve bu iletişimi belirli kurallara göre 
-filtreler. Örneğin, yalnızca belirli IP adreslerinden gelen bağlantılara izin verilebilir veya yalnızca 
-belirli portlar üzerinden veri alışverişine müsaade edilebilir. 
-Bu sayede, kötü niyetli yazılımlar ve saldırılar ağın içine girmeden engellenmiş olur.
-
-4-Servis Yönetimi: 
-Servis yönetimi, sunucularda çalışan yazılımların izlenmesi, başlatılması, durdurulması ve güncellenmesi 
-süreçlerini içerir. 
-Sunucularda birçok farklı hizmet çalışır: web sunucuları, veritabanı sunucuları, e-posta sunucuları gibi. 
-Bu hizmetlerin düzgün çalışması, sistemin genel performansı ve erişilebilirliği için kritik öneme sahiptir. 
-Sistem yöneticileri, bu servislerin aktif olup olmadığını izler, gerektiğinde yeniden başlatır veya durdurur, 
-ayrıca güvenlik güncellemelerini ve yazılım sürümlerini takip ederek günceller. 
-Bu yönetim, hizmetlerin kesintisiz çalışmasını sağlamak için hayati bir rol oynar.
-
-
-
-Sanallaştırma (Virtualization) Nedir ?
---------------------------------------
-Sanallaştırma, bir fiziksel bilgisayar üzerinde birden fazla sanal makine çalıştırma teknolojisidir.
-Bu teknoloji, donanım kaynaklarını (işlemci, bellek, depolama vb.) birden fazla bağımsız ortamda, 
-yani sanal makinelerde izole bir şekilde kullanmaya olanak tanır.
-Her sanal makine, kendi işletim sistemine ve uygulamalarına sahip olup, 
-fiziksel makineden bağımsız gibi çalışabilir.
-
-Nasıl Çalışır?
-Sanallaştırma, bir hipervizör (sanallaştırma yöneticisi) aracılığıyla gerçekleştirilir. 
-Hipervizör, fiziksel donanım ile sanal makineler arasındaki kaynakları yönetir ve her sanal makineyi izole eder.
-Tip 1 Hipervizör (bare-metal): 
-Doğrudan donanım üzerinde çalışır. Genellikle veri merkezlerinde kullanılır. 
-Örnekler: VMware ESXi, Microsoft Hyper-V.
-Tip 2 Hipervizör (hosted): 
-Bir işletim sistemi üzerinde çalışır ve kullanıcı bilgisayarlarında daha yaygın olarak kullanılır. 
-Örnekler: VirtualBox, VMware Workstation.
-Hipervizör, sanal makinelerin işlemci, bellek ve depolama gibi kaynakları verimli bir şekilde kullanmasını sağlar.
-Her sanal makine, kendi işletim sistemine sahip olup bağımsız olarak çalışır.
-
-Nasıl Kurulur?
-Hipervizör Yükleme: İlk adım olarak, sanallaştırma yazılımını (örneğin, VirtualBox veya VMware) yüklemeniz gerekir.
-Sanal Makine Oluşturma: Yüklediğiniz yazılım üzerinden yeni bir sanal makine oluşturun. 
-Bu adımda sanal makinenin ne kadar bellek, işlemci ve depolama alacağı belirlenir.
-İşletim Sistemi Kurma: Sanal makineyi başlatın ve istediğiniz işletim sistemini yükleyin.
-Sanal Makineyi Yönetme: Sanal makineyi çalıştırabilir, başlatabilir, durdurabilir 
-ve kaynakları yeniden yapılandırabilirsiniz.
-
-
-Sunucu (Server) Nedir ?
------------------------
-Sunucu (Server), ağ üzerinden hizmet sağlamak için tasarlanmış bir bilgisayar veya yazılım sistemidir. 
-Sunucular, belirli görevleri yerine getirmek için sürekli olarak çalışır ve istemcilerden 
-(yani kullanıcı cihazlarından) gelen talepleri karşılar. 
-Sunucu, bir istemciden gelen bir isteği alır, işler ve yanıt olarak ilgili veriyi veya hizmeti gönderir. 
-Sunucular, genellikle büyük miktarda veriyi depolama, işleme ve paylaşma amacıyla kullanılır.
-Server'lar verileri saklar, düzenler ve kullanıcıya sunarlar.
-
-Client ->> Server (İstemci ->> Sunucu) ilişkisi, ağ üzerinden hizmet sağlamak için 
-temel bir iletişim modelini ifade eder. 
-
-1-İstemci (Client):
-sunucudan hizmet veya veri isteyen cihaz veya yazılımdır. 
-İstemci genellikle bir kullanıcı cihazı (bilgisayar, telefon, vb.) veya yazılım uygulaması olabilir. 
-İstemci, bir isteği (örneğin, bir web sayfasını yüklemek) sunucuya gönderir.
-2-Sunucu (Server), istemciden gelen istekleri alır, işler ve istemciye geri bir yanıt gönderir.
-Sunucu, çeşitli hizmetler sağlar (örneğin, web sayfası, dosya, veritabanı verisi) ve 
-genellikle güçlü donanım ve yazılım altyapısına sahiptir.
-Özetle, istemci talepte bulunan, sunucu ise bu talepleri işleyip yanıt sağlayan sistemdir.
-
-
-OS VE SERVER FARKI:
-1-İşletim Sistemi (OS), 
-İşletim sistemi, bir bilgisayarın donanımını yönetmek ve kullanıcı ile bilgisayar arasında bir arayüz 
-sağlamak için kullanılan yazılımdır. 
-Donanım kaynaklarını (CPU, bellek, depolama) yönetir ve uygulamaların çalışabilmesi için gerekli ortamı sağlar.
-
-2-Sunucu (Server) ise, ağ üzerinden istemcilere hizmet sağlayan bir bilgisayar veya yazılım sistemidir. 
-Sunucu, belirli bir hizmeti sunar, örneğin web sayfası sunmak veya dosya paylaşmak.
-
-Fark: İşletim sistemi, bilgisayarın temel işlevlerini yönetirken, sunucu belirli bir hizmeti ağ üzerinden sağlar.
-Bir bilgisayar, işletim sistemi üzerinde çalışabilir ve aynı zamanda sunucu işlevi görebilir.
-
-
-ISO Dosyası Nedir ?
--------------------
-ISO dosyası, bir diskin dijital kopyasını içerir. İçerisinde işletim sisteminin dosyaları, 
-kurulum verileri, sistem dosyaları ve genellikle önyükleme için gerekli dosyalar bulunur. 
-Bu, bir CD, DVD (Veri Depolama)  veya USB'ye yazılarak fiziksel bir diske benzer şekilde kullanılabilir.
-
-
-1-Hostname (ağ adı), 
-bir cihazın ağ üzerinde tanımlanan benzersiz adıdır. 
-Genellikle bir bilgisayar, sunucu veya diğer ağ cihazları, birbirlerini 
-tanımak ve iletişim kurmak için host adlarını kullanır. 
-Hostname, cihazın ağdaki kimliğini belirler ve genellikle bir ağda hangi cihazların 
-bulunduğunu belirlemek için kullanılır.
-
-2-Domain name
-
-
-
-Disk bölümlendirmesi (Partitioning disks):
-bir sabit disk veya SSD'nin mantıksal parçalara ayrılması işlemidir. 
-Her bölüm, bağımsız bir dosya sistemiyle formatlanabilir. 
-Bu sayede, işletim sistemi, veriler ve yedeklemeler gibi farklı kullanım amaçları için ayrı 
-bölümler oluşturulabilir. Bölümlendirme, veri yönetimini kolaylaştırır ve diskin daha verimli 
-kullanılmasını sağlar. Ayrıca, bir bölümdeki veri kaybı diğer bölümleri etkilemez.
-
-
-Kullanıcı türleri
--*-*-*-*-*-*-*-*-
-1-Root kullanıcı:
-bir bilgisayar sistemindeki en yüksek yetkiye sahip kullanıcıdır. 
-Bu kullanıcı, sistemdeki tüm dosyalara ve kaynaklara erişim sağlar, 
-diğer kullanıcıları yönetebilir ve sistemin yapılandırmasını değiştirebilir.
-
-2-Normal Kullanıcı:
-Kendi dosyalarına ve belirli kaynaklara erişebilir, ancak sistem 
-dosyalarına veya diğer kullanıcıların verilerine erişemez.
-root'a göre sınırlı yetkiye sahiptir.
-
-LVM
 ---
-Mantıksal Hacim Yöneticisi (LVM), Linux işletim sistemlerinde kullanılan bir disk yönetim aracıdır. 
-LVM, fiziksel diskleri birleştirip daha esnek, yönetilebilir ve ölçeklenebilir bir depolama alanı 
-oluşturmanıza olanak sağlar. LVM, sabit diskleri mantıksal hacimlere dönüştürerek disk yönetimini 
-daha kolay hale getirir.
-LVMGroup: Mantıksal hacim yöneticisi altında fiziksel disklerden oluşturulan gruptur.
-Mantıksal Hacimler (root, home, swap, vb.): Hacim grubu içinde oluşturulan sanal depolama alanlarıdır 
-ve her biri farklı bir dosya sistemi veya amaç için ayrılır(kök dizini, kullanıcı verileri, geçici dosyalar, vb.).
 
-Linux ve Debian farkı 
---------------------
-Linux: Linux, açık kaynaklı bir işletim sistemi çekirdeğidir (kernel). 
-Birçok farklı Linux dağıtımı (örneğin, Ubuntu, Fedora, CentOS) bu çekirdeği 
-kullanarak kendi işletim sistemlerini oluştururlar. 
-Yani, Linux sadece bir çekirdek olup, kendi başına bir işletim sistemi değildir. 
-ancak "Linux dağıtımı" dediğimizde, işletim sistemi olarak kullanılacak tam bir sistemden bahsediyoruz.
+## Sistem Yönetimi
+Sistem yönetimi, bilgisayar sistemlerinin, ağların ve sunucuların yönetim, bakım ve güvenlik süreçlerini kapsar.
 
-Debian: Debian, bir Linux dağıtımıdır ve Linux çekirdeği kullanır. 
-Debian, özgür yazılım felsefesiyle geliştirilmiş ve çok sayıda kullanıcı tarafından tercih edilen bir dağıtımdır. 
-Debian, sabırlı bir şekilde güncellenen, kararlı ve güvenli bir işletim sistemidir ve genellikle 
-sunucu ortamlarında tercih edilir. 
-Debian, ayrıca birçok popüler Linux dağıtımının da temelini oluşturur (örneğin, Ubuntu).
-Çekirdek(Kernel), bir bilgisayarın işletim sisteminin "beyni" gibidir, 
-donanım ve yazılım arasındaki temel etkileşimleri düzenler.
+### 1. Kullanıcı Hesapları Yönetimi
+- **Amaç**: Her kullanıcı için kimlik oluşturma ve erişim haklarını belirleme.
+- **Örnek**: Bir kullanıcı yalnızca okuma iznine sahipken, diğeri yazma ve düzenleme izni alabilir.
 
-Özetle:
-Linux: Çekirdek (kernel).
-Debian: Linux çekirdeğini kullanan bir işletim sistemi dağıtımı.
+### 2. Şifre Politikaları
+- **Kurallar**: Şifre uzunluğu, karmaşıklık ve geçerlilik süresi.
+- **Güvenlik Önlemleri**: Eski şifrelerin kullanılmaması ve periyodik değiştirme.
 
+### 3. Güvenlik Duvarı (Firewall) Yönetimi
+- **Amaç**: Zararlı erişimleri engellemek ve izin verilen trafiği yönetmek.
+- **Örnek**: Belirli IP adreslerinden gelen bağlantılara izin verilmesi.
 
+### 4. Servis Yönetimi
+- **İşlev**: Sunucu hizmetlerini izleme, başlatma, durdurma ve güncelleme.
+- **Örnek**: Web sunucuları, veritabanı sunucularının sorunsuz çalışmasını sağlamak.
 
-monitorind.sh kaldı. 
+---
+
+## Sanallaştırma (Virtualization)
+- **Tanım**: Fiziksel bir bilgisayar üzerinde birden fazla sanal makine çalıştırma teknolojisi.
+- **Nasıl Çalışır?**: Hipervizör (sanallaştırma yöneticisi) kullanılır.
+  - **Tip 1 Hipervizör**: Donanım üzerinde çalışır (örneğin VMware ESXi).
+  - **Tip 2 Hipervizör**: İşletim sistemi üzerinde çalışır (örneğin VirtualBox).
+
+---
+
+## Sunucu (Server)
+- **Tanım**: Ağ üzerinden hizmet sağlayan bilgisayar veya yazılım sistemi.
+- **Client-Server İlişkisi**:
+  - **İstemci (Client)**: Hizmet talep eden cihaz veya yazılım.
+  - **Sunucu (Server)**: İstekleri işleyen ve yanıt sağlayan sistem.
+
+### İşletim Sistemi (OS) ve Sunucu Farkı
+- **OS**: Donanımı yönetir, uygulamalar için ortam sağlar.
+- **Sunucu**: Belirli bir hizmeti ağ üzerinden sunar.
+
+---
+
+## ISO Dosyası
+- **Tanım**: Bir diskin dijital kopyası. Önyükleme ve kurulum dosyalarını içerir.
+- **Kullanım**: USB veya DVD’ye yazılarak fiziksel diske benzer şekilde kullanılabilir.
+
+---
+
+## Kullanıcı Türleri
+- **Root Kullanıcı**: Sistemde tam yetkiye sahip.
+- **Normal Kullanıcı**: Sınırlı yetkilerle işlem yapabilir.
+
+---
+
+## Disk Bölümlendirmesi (Partitioning)
+- **Amaç**: Diskleri mantıksal parçalara ayırarak farklı kullanım alanları oluşturmak.
+- **Örnek**: İşletim sistemi, veri ve yedeklemeler için ayrı bölümler oluşturmak.
+
+---
+
+## LVM (Mantıksal Hacim Yöneticisi)
+- **Tanım**: Daha esnek ve yönetilebilir disk alanı oluşturmayı sağlar.
+- **Bileşenler**:
+  - **Hacim Grupları**: Fiziksel disklerden oluşturulur.
+  - **Mantıksal Hacimler**: Veri depolama için ayrılan alanlardır.
+
+---
+
+## Linux ve Debian Arasındaki Fark
+- **Linux**: Bir çekirdek (kernel).
+- **Debian**: Linux çekirdeğini kullanan bir işletim sistemi dağıtımı.
+
+---
+
+## Hostname ve Domain Name
+- **Hostname**: Bir cihazın ağ üzerindeki benzersiz adı.
+- **Domain Name**: Ağdaki bir alanı veya kaynağı temsil eden isim.
+
+---
+
+## monitorind.sh
+`monitorind.sh` içeriğini burada belirtin veya bir bağlantı ekleyin.
+
