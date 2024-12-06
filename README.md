@@ -13,9 +13,8 @@ Bilgisayarın **beyni** olarak düşünülebilir. Bilgisayarın tüm hesaplama v
 - **İşlemci**: Bilgisayarın çalışması için gerekli tüm işlemleri yapar.
 - **Hız**: Verileri çok hızlı işleyebilme yeteneğine sahiptir, bu sayede bilgisayarın genel performansını belirler.
 - **Çekirdek**: Modern CPU'lar birden fazla çekirdeğe sahip olabilir, her çekirdek bağımsız bir işlem yapabilir, bu da çoklu görevleri daha verimli hale getirir.
-
-- **Fiziksel CPU**: Bilgisayarın içinde bulunan gerçek işlemci donanımıdır. Tüm hesaplama ve veri işleme işlemlerini yapar.
-- **Sanal CPU**: Fiziksel CPU'nun sanal ortamda oluşturulmuş bir yansımasıdır. Genellikle sanal makinelerde (VM) kullanılır ve fiziksel CPU'nun kaynaklarını paylaşarak işlem yapar, yani fiziksel CPU gerçek donanım iken, sanal CPU sanal makinelerde fiziksel CPU'nun kaynaklarını kullanan sanal bir işlemciyi ifade eder.
+**Fiziksel CPU**: Bilgisayarın içinde bulunan gerçek işlemci donanımıdır. Tüm hesaplama ve veri işleme işlemlerini yapar.
+**Sanal CPU**: Fiziksel CPU'nun sanal ortamda oluşturulmuş bir yansımasıdır. Genellikle sanal makinelerde (VM) kullanılır ve fiziksel CPU'nun kaynaklarını paylaşarak işlem yapar, yani fiziksel CPU gerçek donanım iken, sanal CPU sanal makinelerde fiziksel CPU'nun kaynaklarını kullanan sanal bir işlemciyi ifade eder.
 CPU, bilgisayarın tüm işlemlerini yöneten ve çalıştıran en önemli parçadır. Programlar çalışırken, veriler üzerinde hesaplamalar yapar ve bilgisayarın düzgün çalışmasını sağlar.
 
 ## Commands
