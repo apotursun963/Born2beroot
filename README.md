@@ -20,5 +20,4 @@ CPU, bilgisayarın tüm işlemlerini yöneten ve çalıştıran en önemli parç
 
 ## Commands
 ----------
-
-### 1- `lsblk` Sistemdeki disk ve bölümlendirmeleri görüntülemek için kullanılan bir komuttur.
+`lsblk` Sistemdeki disk ve bölümlendirmeleri görüntülemek için kullanılan bir komuttur.
