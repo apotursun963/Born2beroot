@@ -143,12 +143,12 @@ sudo ufw disable
 Port açmak, yani port üzerinden gelen giden ağ trafiğine izin vermek.
 Bu, dış dünyadan (internet gibi) gelen bağlantıların iç ağa erişmesine izin vermek için kullanılır.
 ```
-sudo ufw allow 2
+sudo ufw allow <port>
 ```
 
 Port kapatmak, yani port üzerinden gelen giden ağ trafiğini engellemek/silmek.
 ```
-sudo ufw deny 22
+sudo ufw deny <port> || sudo ufw delete allow <port> || sudo ufw delete <kural>
 ```
 
 Durum kontrolü, güvenlik duvarının etkin olup olmadığını, hangi kuralların uygulandığını ve mevcut yapılandırmayı gösterir.
