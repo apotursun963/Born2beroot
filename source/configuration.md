@@ -94,9 +94,24 @@ sudo getent group || cat /etc/group
 sudo getent group <grup_adı>
 ```
 
+### Sudoers dosyasında kullanıcı yetkilendirme
+Bir kullanıcıya **tam yetki** vermek için, `sudoers` dosyasına şu satır eklenir:
+**username ALL=(ALL:ALL) ALL**
+sudoers dosyasına gitmek için:
+```
+sudo visudo
+```
+
+- **`username`**: `sudo` komutunu kullanarak sistem üzerinde işlem yapacak kullanıcının adı.
+- **`ALL` (ilk)**: **Tüm makinelerde** bu yetkilerin geçerli olmasını sağlar. (Yani, kullanıcı herhangi bir makinada bu yetkilerle işlem yapabilir.)
+- **`(ALL:ALL)`**:
+  - İlk **`ALL`**: Kullanıcı, **herhangi bir kullanıcı adına** komut çalıştırabilir. Örneğin, `root` kullanıcısı adına işlem yapabilir.
+  - İkinci **`ALL`**: Kullanıcı, **herhangi bir grup adına** komut çalıştırabilir.
+- **`ALL` (ikinci)**: Kullanıcı, **tüm komutları** çalıştırmaya yetkilidir
+
+
 ### Kullanıcıyı sudo grubuna ekleme
-Bir kullanıcıyı sudo grubuna eklerseniz, bu kullanıcı yönetici (root) haklarına sahip olur 
-ve sudo komutunu kullanarak sistemde yönetici yetkileriyle işlem yapabilir.
+Bir kullanıcıyı sudo grubuna eklerseniz, bu kullanıcı yönetici (root) haklarına sahip olur ve sudo komutunu kullanarak sistemde yönetici yetkileriyle işlem yapabilir.
 ```
 sudo usermod -aG sudo <kullanıcı_adı> 
 ```
