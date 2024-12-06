@@ -29,3 +29,26 @@ Bu, genellikle tam yetkili bir kullanıcıya (örneğin, bir sistem yöneticisi)
 `lsblk` komut, Sistemdeki disk ve bölümlendirmeleri görüntülemek için kullanılan bir komuttur.
 `hostnamectl` komutu, Sistemin (Cihazın) adını (hostname) görüntülemek veya değiştirmek için kullanılır.
 Cihazın adını değiştirmek için `hostnamectl set-hostname <isim>`
+
+
+
+Sudo komutunun amacı nedir?
+Sudo kurulumu için kullanılan komut nedir?
+Sudo'nun yüklendiğini nasıl kontrol edersiniz?
+Linux sistemlerinde yeni bir kullanıcı nasıl eklenir?
+Sudoers dosyasında bir kullanıcıya tam yetki vermek için hangi satır eklenir?
+UFW (Uncomplicated Firewall) nedir ve ne amaçla kullanılır?
+UFW’yi etkinleştirmek için hangi komut kullanılır?
+SSH protokolü nedir ve ne amaçla kullanılır?
+SSH hizmetinin durumunu kontrol etmek için hangi komut kullanılır?
+SSH hizmetinin varsayılan portu nedir ve bu portu değiştirmek için hangi işlem yapılır?
+Bir kullanıcının şifresini değiştirmek için hangi komut kullanılır?
+UFW ile belirli bir IP'den sadece HTTP trafiğine nasıl izin verilir?
+Kullanıcıları gruplara nasıl ekleyip çıkarabilirsiniz?
+UFW üzerinden port açmak için kullanılan komut nedir?
+SSH bağlantısını sonlandırmak için hangi komut kullanılır?
+Linux sisteminde, şifre güvenliğini sağlamak için hangi şifreleme politikaları uygulanır?
+UFW ile belirli bir portu kapatmak için hangi komut kullanılır?
+Şifre değiştirme süresi ve kuralları nasıl belirlenir?
+chage -l <kullanıcı_adı> komutunun amacı nedir?
+SSH ile uzak bir sunucuya bağlanırken kullanılan bağlantı komutu nedir?
