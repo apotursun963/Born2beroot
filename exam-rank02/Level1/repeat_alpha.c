@@ -35,27 +35,24 @@ $>
 
 int main(int argc, char **argv)
 {
-    if (argc == 2)
-    {
-        int i = 0;
-        int repeat_num = 0;
-        while (argv[1][i] != '\0')
+        if (argc == 2)
         {
-            if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
-            {
-                repeat_num = argv[1][i] - 'a' + 1;
-                while (repeat_num-- != 0)
-                    write(1, &argv[1][i], 1);                
-            }
-            else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-            {
-                repeat_num = argv[1][i] - 'A' + 1;
-                while (repeat_num-- != 0)
-                    write(1, &argv[1][i], 1);     
-            }
-            i++;
+                int i = 0;
+                int repeat_num = 0;
+                while (argv[1][i])
+                {
+                        if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+                                repeat_num = argv[1][i] - 'a' + 1;
+                        else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+                                repeat_num = argv[1][i] - 'A' + 1;
+                        else
+                                repeat_num = 1;
+                        while (repeat_num-- != 0)
+                                write(1, &argv[1][i], 1);
+                        i++;
+                }
         }
-    }
-    write(1, "\n", 1);
-    return (0);
+        write(1, "\n", 1);
+        return (0);
 }
+
