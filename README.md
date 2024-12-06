@@ -26,4 +26,6 @@ Bu, genellikle tam yetkili bir kullanıcıya (örneğin, bir sistem yöneticisi)
 
 ## Commands
 ----------
-`lsblk` Sistemdeki disk ve bölümlendirmeleri görüntülemek için kullanılan bir komuttur.
+`lsblk` komut, Sistemdeki disk ve bölümlendirmeleri görüntülemek için kullanılan bir komuttur.
+`hostnamectl` komutu, Sistemin (Cihazın) adını (hostname) görüntülemek veya değiştirmek için kullanılır.
+Cihazın adını değiştirmek için `hostnamectl set-hostname <isim>`
