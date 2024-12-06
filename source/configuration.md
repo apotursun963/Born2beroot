@@ -249,7 +249,7 @@ ssh <kullanıcı_adı>@localhost -p <port>
 
 ### Ağ yapılandırması ve IP adresi bilgilerini görüntülemek
 ```
-ip a
+ip a || hostname -I
 ```
 
 ### SSH Oturumundan Çıkış
