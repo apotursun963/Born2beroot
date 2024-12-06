@@ -17,6 +17,13 @@ Bilgisayarın **beyni** olarak düşünülebilir. Bilgisayarın tüm hesaplama v
 **Sanal CPU**: Fiziksel CPU'nun sanal ortamda oluşturulmuş bir yansımasıdır. Genellikle sanal makinelerde (VM) kullanılır ve fiziksel CPU'nun kaynaklarını paylaşarak işlem yapar, yani fiziksel CPU gerçek donanım iken, sanal CPU sanal makinelerde fiziksel CPU'nun kaynaklarını kullanan sanal bir işlemciyi ifade eder.
 CPU, bilgisayarın tüm işlemlerini yöneten ve çalıştıran en önemli parçadır. Programlar çalışırken, veriler üzerinde hesaplamalar yapar ve bilgisayarın düzgün çalışmasını sağlar.
 
+username ALL=(ALL:ALL) ALL satırının anlamı, username adlı kullanıcının:
+
+Tüm makinelerde,
+Herhangi bir kullanıcı ve grup adına,
+Tüm komutları çalıştırmasına izin verilmesi anlamına gelir.
+Bu, genellikle tam yetkili bir kullanıcıya (örneğin, bir sistem yöneticisi) verilen bir yetkilendirme satırıdır. Bu kullanıcı, sudo komutunu kullanarak istediği her işlemi, istediği kullanıcı adı ve grup adıyla gerçekleştirebilir.
+
 ## Commands
 ----------
 `lsblk` Sistemdeki disk ve bölümlendirmeleri görüntülemek için kullanılan bir komuttur.
