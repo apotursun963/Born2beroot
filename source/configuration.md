@@ -153,7 +153,7 @@ sudo ufw deny 22
 
 Durum kontrolü, güvenlik duvarının etkin olup olmadığını, hangi kuralların uygulandığını ve mevcut yapılandırmayı gösterir.
 ```
-sudo ufw status verbose
+sudo ufw status || sudo ufw status verbose || sudo ufw status numbered
 ```
 
 Belirli bir IP'den yalnızca HTTP trafiğine izin vermek
