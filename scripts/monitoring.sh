@@ -34,3 +34,14 @@ wall "
           	 Sudo Command Logs  : $SUDO_LOG commands used		
           	---------------------------------------------------------------
 "
+
+# --------------------------------------------------COMMANDS--------------------------------------------------------------
+1-uname: Sistem Hakkında Bilgiler Verir. (Çekirdek Sürümü, Versiyonu | İşletim Sisteminin Adı...)
+2-free: Ram Özelliklerini Görüntüler. (Toplam RAM Miktarı | Kullanılan RAM Miktarı...)
+3-top: Bu Komut Sistemin Anlık Performansını Görüntülemek İçin Kullanılan Bir Sistem Yönetim Aracıdır. 
+CPU kullanımı, Bellek Kullanımı, Disk I/O, Ağ Aktivitesi Gibi Sistem Kaynaklarının Durumunu İzlemek İçin Oldukça Faydalıdır.
+4-df: Sistemdeki Disk Alanı Kullanımını Görüntüler. (Diskteki Tüm Dosya Sistemlerinin Toplam, Kullanılan, Ve Kullanılabilir Alan Bilgilerini Sunar.)
+5-lsblk: Sistemde Bağlı Tüm Blok Cihazlarını (Diskler, Partitionlar, Sanal Diskler vb.) Listelemek İçin Kullanılır. 
+Bu Komut, Bilgisayarın Disk Düzenini ve Yapılarını Görselleştirir, Cihazların Adlarını, Boyutlarını, Dosya Sistemi Türlerini, Mount Noktalarını ve Diğer İlgili Bilgileri Detaylı Bir Şekilde Görüntüler. 
+
+
