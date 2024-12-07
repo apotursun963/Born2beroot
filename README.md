@@ -31,8 +31,8 @@ Bu, genellikle tam yetkili bir kullanıcıya (örneğin, bir sistem yöneticisi)
 Cihazın adını değiştirmek için `hostnamectl set-hostname <isim>`
 
 
-### Bir Sanal Makine Nedir, Nasıl Çalışır ve Amacı Nedir?
-
+## Bir Sanal Makine Nedir, Nasıl Çalışır ve Amacı Nedir?
+----------
 **Bir Sanal Makine Nedir ve Neden Kullanırız:**
 Bir sanal makine, fiziksel bir makineyi taklit ederek canlandırmayı yardımcı olan bir yazılımdır. Yani bilgisayarın için kurduğumuz bir bilgisayardır.
 Neden kullanırız? Mesela yeni bir işletim sistemi denemek istiyorsak, ya da şüphelendiğimiz bir dosya vardır, onu sanal makinede açıp deneriz ve sisteme vereceği zararları aslında sanal makineye vermiş olur ve ana bilgisayarı hiç bir şekilde etkilemez.
@@ -49,26 +49,22 @@ Kaynakların Daha Etkin Kullanımı:
 Bir fiziksel sunucunun (örneğin, güçlü bir bilgisayarın) işlemci gücü, bellek kapasitesi ve depolama alanı gibi kaynakları genelde tam kapasite kullanılmaz. Sanal makineler, bu kaynakları bölerek birden fazla görev için kullanılabilir hale getirir.
 Sonuç: Tek bir fiziksel sunucunun kaynaklarını verimli bir şekilde birden fazla göreve bölersiniz. Böylece, hem maliyet düşer hem de verim artar.
 
------------------------------
 
 ### **Rocky ve Debian nedir ve aralarındaki fark nedir?**
 Rocky ve Debian temelde aslında bir Linux dağıtımıdır. 
 - **Debian**; Geniş bir topluluk tarafından geliştirilir ve çok çeşitli paket yönetimi desteği sunar. Debian, birçok popüler Linux dağıtımının (ör. Ubuntu) temelidir.
 - **Farkı**; Rocky; Kurumsal kullanıcılar, sunucu ortamları için tercih edilir. Debian; Genel kullanıcılar, geliştiriciler, sunucular için daha uygundur.
 
------------------------------
 
 ### **aptitude ve apt nedir ve farkları nelerdir?**
 Her ikisi de, sistemde yazılımların kurulumu, kaldırılması ve güncellenmesi gibi işlemleri gerçekleştirmek için kullanılır. 
 - **apt**; Debian tabanlı dağıtımlar için kullanılan bir paket yönetim aracıdır.
 - **aptitude**; apt'e kıyasla daha gelişmiş bir paket yönetim arayüzüdür. Apt'e ek olarak daha fazla özellik ve işlevsellik sunar.
 
------------------------------
 
 ### **APPArmor nedir?**
 APPArmor, uygulamalara bir tür güvenlik profilleri atar ve bu profiller uygulamanın hangi dosyalara, ağlara ve sistem kaynaklarına erişebileceğini sınırlar. Bu sayede, bir saldırganın kötü niyetli bir uygulamayı kullanarak sistem üzerinde zarar vermesini engeller.
 
------------------------------
 
 ### **Cron, Linux ve Unix tabanlı sistemlerde belirli görevlerin otomatik olarak belirlenen zamanlarda çalıştırılmasını sağlayan bir sistem aracıdır.**
 
