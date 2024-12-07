@@ -37,7 +37,7 @@ Disk bölümlendirilmesi, bir sabit disk veya SSD gibi bir depolama aygıtının
 
 ### Oluşturulacak İki Bölüm:
 
-- **Şifrelenmemiş /boot Bölümü**
+#### **Şifrelenmemiş /boot Bölümü**
 **Adımlar:**
 - `pri/log xxGB FREE SPACE` > `Create a new partition`
 - Boyut olarak **500MB** belirleyin.
@@ -46,7 +46,7 @@ Disk bölümlendirilmesi, bir sabit disk veya SSD gibi bir depolama aygıtının
 - **Mount point** olarak `/boot` seçin.
 - `Done` butonuna tıklayın.
 
-- **Şifrelenmiş Mantıksal Hacim (Encrypted Logical Volumes) Bölümü**
+#### **Şifrelenmiş Mantıksal Hacim (Encrypted Logical Volumes) Bölümü**
 **Adımlar:**
 - `pri/log xxGB FREE SPACE` > `Create a new partition`
 - Boyut olarak **max** belirleyin.
