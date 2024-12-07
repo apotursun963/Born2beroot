@@ -16,7 +16,8 @@ su root
 
 ### Sudo'yu Yükleyin
 **apt** ve **aptitude**, sistemde yazılımların kurulumu, kaldırılması ve güncellenmesi gibi işlemleri gerçekleştirmek için kullanılır.
-Sistem paketini güncelleyin ve sudo paketini yükleyin. apt, sadece komut satırı ile çalışırken aptitude hem komut satırı hem de metin tabanlı kullanıcı arayüzü (TUI) sunar. apt basit bağımlılık çözümü sağlarken, aptitude karmaşık bağımlılık sorunlarını daha esnek şekilde yönetir ve alternatif çözüm önerileri sunar.
+apt, sadece komut satırı ile çalışırken aptitude hem komut satırı hem de metin tabanlı kullanıcı arayüzü (TUI) sunar. apt basit bağımlılık çözümü sağlarken, aptitude karmaşık bağımlılık sorunlarını daha esnek şekilde yönetir ve alternatif çözüm önerileri sunar.
+Sistem paketini güncelleyin ve sudo paketini yükleyin.
 ```
 apt update && apt upgrade && apt install sudo
 ```
