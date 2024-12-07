@@ -31,24 +31,58 @@ Bu, genellikle tam yetkili bir kullanıcıya (örneğin, bir sistem yöneticisi)
 Cihazın adını değiştirmek için `hostnamectl set-hostname <isim>`
 
 
+### Bir Sanal Makine Nedir, Nasıl Çalışır ve Amacı Nedir?
 
-Sudo komutunun amacı nedir?
-Sudo kurulumu için kullanılan komut nedir?
-Sudo'nun yüklendiğini nasıl kontrol edersiniz?
-Linux sistemlerinde yeni bir kullanıcı nasıl eklenir?
-Sudoers dosyasında bir kullanıcıya tam yetki vermek için hangi satır eklenir?
-UFW (Uncomplicated Firewall) nedir ve ne amaçla kullanılır?
-UFW’yi etkinleştirmek için hangi komut kullanılır?
-SSH protokolü nedir ve ne amaçla kullanılır?
-SSH hizmetinin durumunu kontrol etmek için hangi komut kullanılır?
-SSH hizmetinin varsayılan portu nedir ve bu portu değiştirmek için hangi işlem yapılır?
-Bir kullanıcının şifresini değiştirmek için hangi komut kullanılır?
-UFW ile belirli bir IP'den sadece HTTP trafiğine nasıl izin verilir?
-Kullanıcıları gruplara nasıl ekleyip çıkarabilirsiniz?
-UFW üzerinden port açmak için kullanılan komut nedir?
-SSH bağlantısını sonlandırmak için hangi komut kullanılır?
-Linux sisteminde, şifre güvenliğini sağlamak için hangi şifreleme politikaları uygulanır?
-UFW ile belirli bir portu kapatmak için hangi komut kullanılır?
-Şifre değiştirme süresi ve kuralları nasıl belirlenir?
-chage -l <kullanıcı_adı> komutunun amacı nedir?
-SSH ile uzak bir sunucuya bağlanırken kullanılan bağlantı komutu nedir?
+**Bir Sanal Makine Nedir ve Neden Kullanırız:**
+Bir sanal makine, fiziksel bir makineyi taklit ederek canlandırmayı yardımcı olan bir yazılımdır. Yani bilgisayarın için kurduğumuz bir bilgisayardır.
+Neden kullanırız? Mesela yeni bir işletim sistemi denemek istiyorsak, ya da şüphelendiğimiz bir dosya vardır, onu sanal makinede açıp deneriz ve sisteme vereceği zararları aslında sanal makineye vermiş olur ve ana bilgisayarı hiç bir şekilde etkilemez.
+
+**Bir Sanal Makine Nasıl Çalışır?**
+Sanal makineler, hypervisor adı verilen bir yazılım katmanı aracılığıyla çalışır. Hypervisor, ana bilgisayarın donanımını sanal makinelere dağıtarak her birinin bağımsız ve izole şekilde çalışmasını sağlar:
+
+- **Bare-metal Hypervisor**: Doğrudan donanım üzerinde çalışır (ör. VMware ESXi).
+- **Hosted Hypervisor**: Bir işletim sistemi üzerine kurulur (ör. VirtualBox).
+Hypervisor, donanımı sanallaştırarak sanal makinelerin fiziksel donanımı paylaşmasını ve verimli kullanılmasını sağlar.
+
+**Bir Sanal Makinenin Amacı Nedir?**
+Kaynakların Daha Etkin Kullanımı:
+Bir fiziksel sunucunun (örneğin, güçlü bir bilgisayarın) işlemci gücü, bellek kapasitesi ve depolama alanı gibi kaynakları genelde tam kapasite kullanılmaz. Sanal makineler, bu kaynakları bölerek birden fazla görev için kullanılabilir hale getirir.
+Sonuç: Tek bir fiziksel sunucunun kaynaklarını verimli bir şekilde birden fazla göreve bölersiniz. Böylece, hem maliyet düşer hem de verim artar.
+
+-----------------------------
+
+### **Rocky ve Debian nedir ve aralarındaki fark nedir?**
+Rocky ve Debian temelde aslında bir Linux dağıtımıdır. 
+- **Debian**; Geniş bir topluluk tarafından geliştirilir ve çok çeşitli paket yönetimi desteği sunar. Debian, birçok popüler Linux dağıtımının (ör. Ubuntu) temelidir.
+- **Farkı**; Rocky; Kurumsal kullanıcılar, sunucu ortamları için tercih edilir. Debian; Genel kullanıcılar, geliştiriciler, sunucular için daha uygundur.
+
+-----------------------------
+
+### **aptitude ve apt nedir ve farkları nelerdir?**
+Her ikisi de, sistemde yazılımların kurulumu, kaldırılması ve güncellenmesi gibi işlemleri gerçekleştirmek için kullanılır. 
+- **apt**; Debian tabanlı dağıtımlar için kullanılan bir paket yönetim aracıdır.
+- **aptitude**; apt'e kıyasla daha gelişmiş bir paket yönetim arayüzüdür. Apt'e ek olarak daha fazla özellik ve işlevsellik sunar.
+
+-----------------------------
+
+### **APPArmor nedir?**
+APPArmor, uygulamalara bir tür güvenlik profilleri atar ve bu profiller uygulamanın hangi dosyalara, ağlara ve sistem kaynaklarına erişebileceğini sınırlar. Bu sayede, bir saldırganın kötü niyetli bir uygulamayı kullanarak sistem üzerinde zarar vermesini engeller.
+
+-----------------------------
+
+### **Cron, Linux ve Unix tabanlı sistemlerde belirli görevlerin otomatik olarak belirlenen zamanlarda çalıştırılmasını sağlayan bir sistem aracıdır.**
+
+**Crontab Dosyası:**
+`crontab` komutu, kullanıcıların kendi görevlerini tanımlayabileceği bir sistem sunar. `crontab -e` komutu, mevcut crontab dosyasını düzenlemek için kullanılır.
+Bir crontab dosyası, beş alanlık bir ifade ile belirtilen zamanlama ve komut içeriğini içerir:
+
+- **Dakika (0-59)**
+- **Saat (0-23)**
+- **Gün (1-31)**
+- **Ay (1-12)**
+- **Gün (0-6, 0=Pazar)**
+
+Örnek:
+`0 2 * * * /usr/bin/backup_script.sh`
+Bu, her gün saat 02:00'de `backup_script.sh` adlı komutun çalıştırılacağını belirtir.
+
