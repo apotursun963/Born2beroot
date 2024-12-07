@@ -22,8 +22,13 @@
 8. Kullanıcı Oluşturun: Yeni bir kullanıcı oluşturun ve güçlü bir şifre belirleyin.
 
 ## Disk Bölümlendirilmesi
-
 Disk bölümlendirilmesi, bir sabit disk veya SSD gibi bir depolama aygıtının, birden fazla bağımsız bölüme (partition) ayrılması işlemidir. Bu bölümler, depolama cihazının farklı alanlarını ayrı ayrı kullanmayı sağlar ve her biri işletim sistemi tarafından ayrı bir disk gibi algılanır.
+
+### Disk Bölümlendirme Türleri
+   - Birincil Bölüm (Primary Partition):
+     - Doğrudan disk üzerinde oluşturulan bağımsız bir bölümdür. İşletim sistemleri genellikle buradan önyüklenir. Bu bölüm, bilgisayarın açılışında önyükleme yapabilmesi için gereklidir ve diskin ana bölümleri olarak kullanılır. Birincil bölümler, diskteki verilerin en temel ve kritik yönetimini sağlar.
+   - Mantıksal Bölüm (Logical Partition):
+     - Bir diskte sınırsız sayıda mantıksal bölüm oluşturulabilir. Bu, kullanıcıların verilerini daha verimli yönetmelerini sağlar. Mantıksal bölümler, genellikle müzik, film, yazılım gibi dosyaların depolanması için kullanılır ve birincil bölümlere göre daha az kritik verilere ev sahipliği yaparlar.
 
 ### Adımlar:
 1. **Manual Bölümleme Seçeneğini Seçin**
@@ -31,12 +36,8 @@ Disk bölümlendirilmesi, bir sabit disk veya SSD gibi bir depolama aygıtının
 3. **Yes** Seçeneğini Tıklayın
 
 ### Oluşturulacak İki Bölüm:
+
 - **Şifrelenmemiş /boot Bölümü**
-- **Şifrelenmiş Mantıksal Hacim (Encrypted Logical Volumes) Bölümü**
-
-#### 1. **Şifrelenmemiş /boot Bölümü**
-`/boot` bölümü, işletim sisteminin başlatılması için gerekli dosyaları barındırır ve genellikle ayrı bir disk bölümü olarak yapılandırılır. Genellikle **500 MB ile 1 GB** arasındaki bir boyut yeterlidir.
-
 **Adımlar:**
 - `pri/log xxGB FREE SPACE` > `Create a new partition`
 - Boyut olarak **500MB** belirleyin.
@@ -45,9 +46,7 @@ Disk bölümlendirilmesi, bir sabit disk veya SSD gibi bir depolama aygıtının
 - **Mount point** olarak `/boot` seçin.
 - `Done` butonuna tıklayın.
 
-#### 2. **Şifrelenmiş Mantıksal Hacim (Encrypted Logical Volumes) Bölümü**
-Bu bölüm, diskin geri kalan kısmında şifreli bir mantıksal hacim oluşturur.
-
+- **Şifrelenmiş Mantıksal Hacim (Encrypted Logical Volumes) Bölümü**
 **Adımlar:**
 - `pri/log xxGB FREE SPACE` > `Create a new partition`
 - Boyut olarak **max** belirleyin.
