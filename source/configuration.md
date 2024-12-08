@@ -288,7 +288,7 @@ exit
     - `difok = 7`
   - Kullanıcıya en fazla 3 kez şifre oluşturma denemesi hakkı olmalı.
     - `retry = 3`
-  - Yukarda belirtilen adımlara göre `sudo nano /etc/security/pwquality.conf` dosyasına giderek yapılandırmaları gerçekleştirin. Ayrıca **Root şifresi** de yukarıdaki kurallara uymalıdır.
+  - Yukarda belirtilen adımlara göre `sudo nano /etc/pam.d/common-password || sudo nano /etc/security/pwquality.conf` dosyasına giderek yapılandırmaları gerçekleştirin. Ayrıca **Root şifresi** de yukarıdaki kurallara uymalıdır.
 
 ### Kullanıcı Şifresini Değiştirme
 ```
