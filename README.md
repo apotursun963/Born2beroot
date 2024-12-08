@@ -63,7 +63,7 @@ Her ikisi de, sistemde yazılımların kurulumu, kaldırılması ve güncellenme
 
 
 ### **APPArmor nedir?**
-APPArmor, uygulamalara bir tür güvenlik profilleri atar ve bu profiller uygulamanın hangi dosyalara, ağlara ve sistem kaynaklarına erişebileceğini sınırlar. Bu sayede, bir saldırganın kötü niyetli bir uygulamayı kullanarak sistem üzerinde zarar vermesini engeller.
+APPArmor, Linux sistemlerinde uygulama güvenliğini sağlamak için kullanılan bir güvenlik modülüdür. Uygulamaların yalnızca belirli kaynaklara erişmesini sağlar uygulamalara bir tür güvenlik profilleri atar ve bu profiller uygulamanın hangi dosyalara, ağlara ve sistem kaynaklarına erişebileceğini sınırlar. Bu sayede, bir saldırganın kötü niyetli bir uygulamayı kullanarak sistem üzerinde zarar vermesini engeller.
 
 
 ### **Cron, Linux ve Unix tabanlı sistemlerde belirli görevlerin otomatik olarak belirlenen zamanlarda çalıştırılmasını sağlayan bir sistem aracıdır.**
