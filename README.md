@@ -52,7 +52,7 @@ Sonuç: Tek bir fiziksel sunucunun kaynaklarını verimli bir şekilde birden fa
 
 ### **Rocky ve Debian nedir ve aralarındaki fark nedir?**
 Rocky ve Debian temelde aslında bir Linux dağıtımıdır. 
-- **Debian**; Geniş bir topluluk tarafından geliştirilir ve çok çeşitli paket yönetimi desteği sunar. Debian, birçok popüler Linux dağıtımının (ör. Ubuntu) temelidir.
+- **Debian**; Bağımsız bir dağıtımdır ve genellikle kendi paket yönetim sistemi ve yazılımlarını kullanır. Debian, birçok popüler Linux dağıtımının (ör. Ubuntu) temelidir.
 - **Farkı**; Rocky; Kurumsal kullanıcılar, sunucu ortamları için tercih edilir. Debian; Genel kullanıcılar, geliştiriciler, sunucular için daha uygundur.
 
 
