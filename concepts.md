@@ -112,6 +112,7 @@ Bir fiziksel sunucunun (örneğin, güçlü bir bilgisayarın) işlemci gücü, 
 Sonuç: Tek bir fiziksel sunucunun kaynaklarını verimli bir şekilde birden fazla göreve bölersiniz. Böylece, hem maliyet düşer hem de verim artar.
 
 ## **Cron Nedir ?**
+-------------------
 Linux ve Unix tabanlı sistemlerde belirli görevlerin otomatik olarak belirlenen zamanlarda çalıştırılmasını sağlayan bir sistem aracıdır.
 
 ### **Crontab Dosyası:**
