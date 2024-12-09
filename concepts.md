@@ -1,51 +1,28 @@
+# Kavramlar (Concepts)
+---------------------
 
 
-Güzel bir şekilde özetle 
-
--Linux Dosya Sistemi Klasörlerinin Açılımı ve İşlevleri
-/etc | /bin | /sbin | /user .....
-
-
-Sistem yönetimi (system administration) Nedir ?
------------------------------------------------
+## Sistem yönetimi (system administration) Nedir ?
+-------------------------------------------------
 Sistem yönetimi, bilgisayar sistemlerinin, ağların ve sunucuların yönetilmesi, 
 bakımının yapılması ve güvenliğinin sağlanması sürecidir. 
 Sistem yöneticileri, altyapının sorunsuz çalışmasını sağlamak için donanım, 
-yazılım ve güvenlik önlemleriyle ilgilenir. Sistem yönetimi kavramlarından bazıları:
+yazılım ve güvenlik önlemleriyle ilgilenir.
 
-1-Kullanıcı Hesapları Yönetimi:
-Kullanıcı hesapları yönetimi, bir bilgisayar sisteminde her birey için 
-kimlik oluşturulması ve bu kimliğin kontrol edilmesidir. 
-Sistem yöneticileri, her kullanıcıya özgü hesaplar oluşturur ve her hesabın erişim haklarını belirler. 
-Bu haklar, kullanıcıların hangi kaynaklara erişebileceğini ve hangi işlemleri gerçekleştirebileceğini düzenler. 
-Örneğin, bazı kullanıcılar yalnızca okuma iznine sahipken, diğerleri yazma ve düzenleme izni alabilir. 
-Bu, güvenliği sağlamak ve kullanıcıların sadece yetkilendirildikleri verilere erişmesini temin 
-etmek için oldukça önemlidir.
+### Sistem Yönetimi Kavramlarından Bazıları:
+  - **Kullanıcı hesapları yönetimi**:
+    - Kullanıcı hesapları yönetimi, bir bilgisayar sisteminde her birey için kimlik oluşturulması ve bu kimliğin kontrol edilmesidir. Sistem yöneticileri, her kullanıcıya özgü hesaplar oluşturur ve her hesabın erişim haklarını belirler. Bu haklar, kullanıcıların hangi kaynaklara erişebileceğini ve hangi işlemleri gerçekleştirebileceğini düzenler. Örneğin, bazı kullanıcılar yalnızca okuma iznine sahipken, diğerleri yazma ve düzenleme izni alabilir. Bu, güvenliği sağlamak ve kullanıcıların sadece yetkilendirildikleri verilere erişmesini temin etmek için oldukça önemlidir.
 
-2-Şifre Politikaları:
-Şifre politikaları, kullanıcıların güçlü ve güvenli şifreler oluşturmasını sağlamak amacıyla belirlenen kurallardır. 
-Bu kurallar, şifrelerin minimum uzunluğu, karmaşıklığı (büyük/küçük harf, rakam, özel karakter kullanımı) 
-ve geçerlilik süresi gibi unsurları içerir. 
-Güçlü şifreler, siber saldırılara karşı bir savunma hattı oluşturur ve kullanıcı hesaplarının kötüye 
-kullanımını engeller. Ayrıca, şifrelerin periyodik olarak değiştirilmesi veya eski şifrelerin kullanılmaması 
-gibi güvenlik önlemleri de şifre politikalarının bir parçasıdır.
+  - **Şifreleme politikaları**:
+    - Şifre politikaları, kullanıcıların güçlü ve güvenli şifreler oluşturmasını sağlamak amacıyla belirlenen kurallardır. Bu kurallar, şifrelerin minimum uzunluğu, karmaşıklığı (büyük/küçük harf, rakam, özel karakter kullanımı) ve geçerlilik süresi gibi unsurları içerir. Güçlü şifreler, siber saldırılara karşı bir savunma hattı oluşturur ve kullanıcı hesaplarının kötüye kullanımını engeller. Ayrıca, şifrelerin periyodik olarak değiştirilmesi veya eski şifrelerin kullanılmaması gibi güvenlik önlemleri de şifre politikalarının bir parçasıdır.
 
-3-Güvenlik Duvarı (Firewall) Yönetimi:
-Güvenlik duvarı yönetimi, ağdaki trafiği izleyerek ve denetleyerek zararlı erişimlerin engellenmesini, 
-yetkilendirilmiş trafiğin ise geçmesini sağlamayı amaçlar. 
-Güvenlik duvarları, iç ağ ile dış ağ arasındaki iletişimi kontrol eder ve bu iletişimi belirli kurallara göre 
-filtreler. Örneğin, yalnızca belirli IP adreslerinden gelen bağlantılara izin verilebilir veya yalnızca 
-belirli portlar üzerinden veri alışverişine müsaade edilebilir. 
-Bu sayede, kötü niyetli yazılımlar ve saldırılar ağın içine girmeden engellenmiş olur.
+  - **Güvenlik duvarı (firewall) yönetimi**:
+    - Güvenlik duvarı yönetimi, ağdaki trafiği izleyerek ve denetleyerek zararlı erişimlerin engellenmesini, yetkilendirilmiş trafiğin ise geçmesini sağlamayı amaçlar. Güvenlik duvarları, iç ağ ile dış ağ arasındaki iletişimi kontrol eder ve bu iletişimi belirli kurallara göre filtreler. Örneğin, yalnızca belirli IP adreslerinden gelen
+bağlantılara izin verilebilir veya yalnızca belirli portlar üzerinden veri alışverişine müsaade edilebilir. Bu sayede, kötü niyetli yazılımlar ve saldırılar ağın içine girmeden engellenmiş olur.
 
-4-Servis Yönetimi: 
-Servis yönetimi, sunucularda çalışan yazılımların izlenmesi, başlatılması, durdurulması ve güncellenmesi 
-süreçlerini içerir. 
-Sunucularda birçok farklı hizmet çalışır: web sunucuları, veritabanı sunucuları, e-posta sunucuları gibi. 
-Bu hizmetlerin düzgün çalışması, sistemin genel performansı ve erişilebilirliği için kritik öneme sahiptir. 
-Sistem yöneticileri, bu servislerin aktif olup olmadığını izler, gerektiğinde yeniden başlatır veya durdurur, 
-ayrıca güvenlik güncellemelerini ve yazılım sürümlerini takip ederek günceller. 
-Bu yönetim, hizmetlerin kesintisiz çalışmasını sağlamak için hayati bir rol oynar.
+  - **Servis yönetimi**:
+    - Servis yönetimi, sunucularda çalışan yazılımların izlenmesi, başlatılması, durdurulması ve güncellenmesi süreçlerini içerir. Sunucularda birçok farklı hizmet çalışır: web sunucuları, veritabanı sunucuları, e-posta sunucuları gibi. Bu hizmetlerin düzgün çalışması, sistemin genel performansı ve erişilebilirliği için kritik öneme sahiptir. 
+Sistem yöneticileri, bu servislerin aktif olup olmadığını izler, gerektiğinde yeniden başlatır veya durdurur, ayrıca güvenlik güncellemelerini ve yazılım sürümlerini takip ederek günceller. Bu yönetim, hizmetlerin kesintisiz çalışmasını sağlamak için hayati bir rol oynar.
 
 
 
@@ -180,6 +157,10 @@ donanım ve yazılım arasındaki temel etkileşimleri düzenler.
 Özetle:
 Linux: Çekirdek (kernel).
 Debian: Linux çekirdeğini kullanan bir işletim sistemi dağıtımı.
+Güzel bir şekilde özetle 
+
+-Linux Dosya Sistemi Klasörlerinin Açılımı ve İşlevleri
+/etc | /bin | /sbin | /user .....
 
 
 ## Concepts
